@@ -17,6 +17,8 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   sensor_msgs
   std_msgs
+  controller_msgs
+  val_vr_ros
 )
 
 find_package(Eigen3 REQUIRED)
@@ -26,6 +28,7 @@ find_package(Eigen3 REQUIRED)
 #------------------------------------------------------------------------
 generate_dynamic_reconfigure_options(
   cfg/JointMonitorParams.cfg
+  cfg/EndEffectorMonitorParams.cfg
 )
 message ("generated param config files!")
 
@@ -33,7 +36,7 @@ message ("generated param config files!")
 #     catkin Setup
 #------------------------------------------------------------------------
 catkin_package(
-  CATKIN_DEPENDS roscpp rospy tf geometry_msgs sensor_msgs std_msgs
+  CATKIN_DEPENDS roscpp rospy tf geometry_msgs sensor_msgs std_msgs controller_msgs val_vr_ros
   DEPENDS EIGEN3
 )
 include_directories(${catkin_INCLUDE_DIRS})
@@ -45,9 +48,11 @@ message("Eigen include directories: ${EIGEN3_INCLUDE_DIRS}")
 #------------------------------------------------------------------------
 include_directories ("${PROJECT_SOURCE_DIR}/..")
 include_directories ("${PROJECT_SOURCE_DIR}")
+include_directories ("${PROJECT_SOURCE_DIR}/monitors")
 include_directories ("${PROJECT_SOURCE_DIR}/nodes")
 
 #---------------------------------------------------------------------------
 #     Directory Selection
 #---------------------------------------------------------------------------
+add_subdirectory (monitors)
 add_subdirectory (nodes)

@@ -14,6 +14,6 @@
 	</node>
 
 	<!-- rosrun rqt_reconfigure rqt_reconfigure -->
-	<node pkg="rqt_reconfigure" name="rqt_reconfigure" type="rqt_reconfigure" output="screen"/>
+	<node pkg="rqt_reconfigure" name="rqt_reconfigure_joint_monitor" type="rqt_reconfigure" output="screen"/>
 
 </launch>

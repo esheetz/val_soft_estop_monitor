@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--***********************************************************
+	End-Effector Monitor Node
+	Emily Sheetz, NSTGRO VTE 2023
+************************************************************-->
+<launch>
+	
+	<!-- parameters for specifying end-effector streaming topic -->
+	<arg name="ee_streaming_topic" default="/ihmc/valkyrie/toolbox/ik_streaming/input/kinematics_streaming_toolbox_input"/>
+
+	<node pkg="val_soft_estop_monitor" type="end_effector_monitor_node" name="ValkyrieEndEffectorMonitorNode" output="screen">
+		<param name="ee_streaming_topic" type="string" value="$(arg ee_streaming_topic)"/>
+		<!--<param name="" type="" value=""/> -->
+	</node>
+
+	<!-- rosrun rqt_reconfigure rqt_reconfigure -->
+	<node pkg="rqt_reconfigure" name="rqt_reconfigure_end_effector_monitor" type="rqt_reconfigure" output="screen"/>
+
+</launch>

@@ -16,40 +16,39 @@
 #include <dynamic_reconfigure/server.h>
 #include <val_soft_estop_monitor/JointMonitorParamsConfig.h>
 
-class JointMonitorNode
+#include <monitors/generic_monitor_node.h>
+
+class JointMonitorNode : public GenericMonitorNode
 {
 public:
 	// CONSTRUCTORS/DESTRUCTORS
-	JointMonitorNode(const ros::NodeHandle& nh);
+	JointMonitorNode();
 	~JointMonitorNode();
 
+	// INITIALIZATION
+    void initializeMonitor(const ros::NodeHandle& nh) override;
+
 	// CONNECTIONS
-	bool initializeConnections();
+	bool initializeConnections() override;
 
 	// DYNAMIC RECONFIGURE SERVER
-	void initializeDynamicReconfigureServer();
+	void initializeDynamicReconfigureServer() override;
 
 	// CALLBACKS
 	void paramReconfigureCallback(val_soft_estop_monitor::JointMonitorParamsConfig &config, uint32_t level);
 	void jointStateCallback(const sensor_msgs::JointState& msg);
 
 	// GETTERS/SETTERS
-	double getLoopRate();
+	std::string getNodeName() override;
 
 	// HELPERS
-	void initializeMessageCounter();
-	void decrementMessageCounter();
-	void publishPauseWalkingMessage();
-	void publishStopWalkingMessage();
+	void publishAllSoftEStopMessages() override;
 
 	// MONITOR FUNCTIONS
+	bool checkMonitorCondition() override;
 	bool checkVelocityTorqueLimits();
-	void performSoftEStop();
 
 private:
-	ros::NodeHandle nh_; // node handler
-
-	ros::Publisher ihmc_interface_status_pub_; // publisher for IHMC pause/stop commands
 	std::string joint_state_topic_; // topic for listening to joint velocities/torques
 	ros::Subscriber joint_state_sub_; // subscriber for listening to joint velocities/torques
 
@@ -59,10 +58,6 @@ private:
 	// internal storage for velocities and torques
 	std::map<std::string, double> joint_velocities_;
 	std::map<std::string, double> joint_torques_;
-
-	int ihmc_interface_pause_stop_msg_counter_; // counter for how many times to publish pause/stop commands
-
-	double loop_rate_;
 
 	// limits for velocity/torque; can be dynamically reconfigured
 	double JOINT_TORQUE_LIMIT_;

@@ -6,17 +6,22 @@
 #include <nodes/joint_monitor_node.h>
 
 // CONSTRUCTORS/DESTRUCTORS
-JointMonitorNode::JointMonitorNode(const ros::NodeHandle& nh) {
-    nh_ = nh;
-
-    loop_rate_ = 10.0; // Hz
-
-    ihmc_interface_pause_stop_msg_counter_ = 0;
-
+JointMonitorNode::JointMonitorNode() {
     // initialize velocity and torque limits to some default
     JOINT_VELOCITY_LIMIT_ = 10.0;
     JOINT_TORQUE_LIMIT_   = 10.0;
     // NOTE initialization does not matter, will immediately be reconfigured to defaults set in cfg/JointMonitorParams.cfg
+
+    ROS_INFO("[%s] Constructed", getNodeName().c_str());
+}
+
+JointMonitorNode::~JointMonitorNode() {
+    ROS_INFO("[%s] Destroyed", getNodeName().c_str());
+}
+
+// INITIALIZATION
+void JointMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
+    GenericMonitorNode::initializeMonitor(nh);
 
     // set up parameters
     nh_.param("joint_state_topic", joint_state_topic_, std::string("/ihmc_ros/valkyrie/output/joint_states"));
@@ -27,20 +32,17 @@ JointMonitorNode::JointMonitorNode(const ros::NodeHandle& nh) {
     // initialize dynamic reconfigure server
     initializeDynamicReconfigureServer();
 
-    ROS_INFO("[Joint Monitor Node] Constructed");
-}
+    ROS_INFO("[%s] Initialized", getNodeName().c_str());
 
-JointMonitorNode::~JointMonitorNode() {
-    ROS_INFO("[Joint Monitor Node] Destroyed");
+    return;
 }
 
 // CONNECTIONS
 bool JointMonitorNode::initializeConnections() {
+    GenericMonitorNode::initializeConnections();
+
     // joint state subscriber
     joint_state_sub_ = nh_.subscribe(joint_state_topic_, 1, &JointMonitorNode::jointStateCallback, this);
-
-    // status publisher for soft estops
-    ihmc_interface_status_pub_ = nh_.advertise<std_msgs::String>("/IHMCInterfaceNode/controllers/output/ihmc/controller_status", 100);
 
     return true;
 }
@@ -65,7 +67,8 @@ void JointMonitorNode::paramReconfigureCallback(val_soft_estop_monitor::JointMon
     JOINT_VELOCITY_LIMIT_ = config.joint_velocity_limit;
     JOINT_TORQUE_LIMIT_ = config.joint_torque_limit;
 
-    ROS_INFO("[Joint Monitor Node] Reconfigured velocity limit to %f and torque limit to %f", JOINT_VELOCITY_LIMIT_, JOINT_TORQUE_LIMIT_);
+    ROS_INFO("[%s] Reconfigured velocity limit to %f and torque limit to %f",
+             getNodeName().c_str(), JOINT_VELOCITY_LIMIT_, JOINT_TORQUE_LIMIT_);
 
     return;
 }
@@ -82,48 +85,24 @@ void JointMonitorNode::jointStateCallback(const sensor_msgs::JointState& msg) {
 }
 
 // GETTERS/SETTERS
-double JointMonitorNode::getLoopRate() {
-    return loop_rate_;
+std::string JointMonitorNode::getNodeName() {
+    return std::string("Joint Monitor Node");
 }
 
 // HELPERS
-void JointMonitorNode::initializeMessageCounter() {
-    ihmc_interface_pause_stop_msg_counter_ = 5;
-
-    return;
-}
-
-void JointMonitorNode::decrementMessageCounter() {
-    ihmc_interface_pause_stop_msg_counter_--;
-
-    return;
-}
-
-void JointMonitorNode::publishPauseWalkingMessage() {
-    // create string message
-    std_msgs::String str_msg;
-    str_msg.data = std::string("PAUSE-WALKING");
-
-    ihmc_interface_status_pub_.publish(str_msg);
-
-    ros::spinOnce(); // make sure messages go through
-
-    return;
-}
-
-void JointMonitorNode::publishStopWalkingMessage() {
-    // create string message
-    std_msgs::String str_msg;
-    str_msg.data = std::string("STOP-ALL-TRAJECTORY");
-
-    ihmc_interface_status_pub_.publish(str_msg);
-
-    ros::spinOnce(); // make sure messages go through
+void JointMonitorNode::publishAllSoftEStopMessages() {
+    // publish pause walking and stop trajectory messages
+    publishPauseWalkingMessage();
+    publishStopWalkingMessage();
 
     return;
 }
 
 // MONITOR FUNCTIONS
+bool JointMonitorNode::checkMonitorCondition() {
+    return checkVelocityTorqueLimits();
+}
+
 bool JointMonitorNode::checkVelocityTorqueLimits() {
     // verify some velocity/torque information has been received
     // both maps are always updated together, so if one is empty, the other will be as well
@@ -141,8 +120,8 @@ bool JointMonitorNode::checkVelocityTorqueLimits() {
         if( abs(joint_vel.second) >= JOINT_VELOCITY_LIMIT_ ) {
             // update flag
             limit_found = true;
-            ROS_WARN("[Joint Monitor Node] Joint %s has velocity %f, which exceeds limit %f",
-                     joint_vel.first.c_str(), joint_vel.second, JOINT_VELOCITY_LIMIT_);
+            ROS_WARN("[%s] Joint %s has velocity %f, which exceeds limit %f",
+                     getNodeName().c_str(), joint_vel.first.c_str(), joint_vel.second, JOINT_VELOCITY_LIMIT_);
         }
     }
 
@@ -152,36 +131,12 @@ bool JointMonitorNode::checkVelocityTorqueLimits() {
         if( abs(joint_trq.second) >= JOINT_TORQUE_LIMIT_ ) {
             // update flag
             limit_found = true;
-            ROS_WARN("[Joint Monitor Node] Joint %s has torque %f, which exceeds limit %f",
-                     joint_trq.first.c_str(), joint_trq.second, JOINT_TORQUE_LIMIT_);
+            ROS_WARN("[%s] Joint %s has torque %f, which exceeds limit %f",
+                     getNodeName().c_str(), joint_trq.first.c_str(), joint_trq.second, JOINT_TORQUE_LIMIT_);
         }
     }
 
     return limit_found;
-}
-
-void JointMonitorNode::performSoftEStop() {
-    // check for velocity and torque limits
-    if( checkVelocityTorqueLimits() ) {
-        // check if limit already detected
-        if( ihmc_interface_pause_stop_msg_counter_ == 0) {
-            // set message counter
-            initializeMessageCounter();
-            ROS_WARN("[Joint Monitor Node] Found velocity or torque limit! Performing soft e-stop!");
-        }
-        // otherwise, limit has already been detected and pause/stop messages are being sent
-    }
-
-    // check if messages need to be published for soft estop
-    if( ihmc_interface_pause_stop_msg_counter_ > 0 ) {
-        // publish pause walking and stop trajectory messages
-        publishPauseWalkingMessage();
-        publishStopWalkingMessage();
-        // decrement counter
-        decrementMessageCounter();
-    }
-
-    return;
 }
 
 int main(int argc, char **argv) {
@@ -191,9 +146,10 @@ int main(int argc, char **argv) {
     // initialize node handler
     ros::NodeHandle nh("~");
 
-    // create node
-    JointMonitorNode joint_monitor(nh);
-    ROS_INFO("[Joint Monitor Node] Node started!");
+    // create and initialize node
+    JointMonitorNode joint_monitor;
+    joint_monitor.initializeMonitor(nh);
+    ROS_INFO("[%s] Node started!", joint_monitor.getNodeName().c_str());
 
     // get loop rate
     ros::Rate rate(joint_monitor.getLoopRate());
@@ -208,7 +164,7 @@ int main(int argc, char **argv) {
         rate.sleep();
     }
 
-    ROS_INFO("[Joint Monitor Node] Node stopped, all done!");
+    ROS_INFO("[%s] Node stopped, all done!", joint_monitor.getNodeName().c_str());
 
     return 0;
 }
