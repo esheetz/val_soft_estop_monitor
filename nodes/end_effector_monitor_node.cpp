@@ -74,11 +74,15 @@ void EndEffectorMonitorNode::initializeDynamicReconfigureServer() {
 // CALLBACKS
 void EndEffectorMonitorNode::paramReconfigureCallback(val_soft_estop_monitor::EndEffectorMonitorParamsConfig &config, uint32_t level) {
     // take params from reconfigure request and store them internally
+    debug_ = config.debug;
     EE_HAND_POS_DELTA_LIMIT_ = config.ee_hand_pos_delta_limit;
     EE_HAND_ORI_DELTA_LIMIT_ = config.ee_hand_ori_delta_limit;
     EE_HEAD_POS_DELTA_LIMIT_ = config.ee_head_pos_delta_limit;
     EE_HEAD_ORI_DELTA_LIMIT_ = config.ee_head_ori_delta_limit;
 
+    if( debug_ ) {
+        ROS_INFO("[%s] ENTERED DEBUG MODE", getNodeName().c_str());
+    }
     ROS_INFO("[%s] Reconfigured hand position limit to %f meters and hand orientation limit to %f radians",
              getNodeName().c_str(), EE_HAND_POS_DELTA_LIMIT_, EE_HAND_ORI_DELTA_LIMIT_);
     ROS_INFO("[%s] Reconfigured head position limit to %f meters and head orientation limit to %f radians",
@@ -200,6 +204,12 @@ bool EndEffectorMonitorNode::checkEndEffectorDeltas() {
         // compute distances
         double dist_pos = computePositionDistance(desired_ee_pos, actual_ee_pos);
         double dist_rot = computeRotationDistance(desired_ee_rot, actual_ee_rot);
+
+        // print end-effector distances
+        if( debug_ ) {
+            ROS_INFO("[%s] DEBUG MODE: End-effector %s is %f meters from desired position and %f radians from desired orientation",
+                     getNodeName().c_str(), ee_name.c_str(), dist_pos, dist_rot);
+        }
 
         // check for limits
         bool limit_pos = checkEndEffectorPositionLimit(dist_pos, ee_name);

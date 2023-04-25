@@ -63,6 +63,8 @@ protected:
     int ihmc_interface_pause_stop_msg_counter_; // counter for how many times to publish pause/stop commands
 
     double loop_rate_;
+
+    bool debug_;
 };
 
 #endif

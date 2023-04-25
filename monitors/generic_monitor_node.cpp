@@ -10,6 +10,8 @@ GenericMonitorNode::GenericMonitorNode() {
     loop_rate_ = 10.0; // Hz
 
     ihmc_interface_pause_stop_msg_counter_ = 0;
+
+    debug_ = false;
 }
 
 GenericMonitorNode::~GenericMonitorNode() {

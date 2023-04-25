@@ -64,9 +64,13 @@ void JointMonitorNode::initializeDynamicReconfigureServer() {
 // CALLBACKS
 void JointMonitorNode::paramReconfigureCallback(val_soft_estop_monitor::JointMonitorParamsConfig &config, uint32_t level) {
     // take params from reconfigure request and store them internally
+    debug_ = config.debug;
     JOINT_VELOCITY_LIMIT_ = config.joint_velocity_limit;
     JOINT_TORQUE_LIMIT_ = config.joint_torque_limit;
 
+    if( debug_ ) {
+        ROS_INFO("[%s] ENTERED DEBUG MODE", getNodeName().c_str());
+    }
     ROS_INFO("[%s] Reconfigured velocity limit to %f and torque limit to %f",
              getNodeName().c_str(), JOINT_VELOCITY_LIMIT_, JOINT_TORQUE_LIMIT_);
 
@@ -116,6 +120,12 @@ bool JointMonitorNode::checkVelocityTorqueLimits() {
 
     // look through available velocity information
     for( const std::pair<std::string, double>& joint_vel : joint_velocities_ ) {
+        // print joint velocity
+        if( debug_ ) {
+            ROS_INFO("[%s] DEBUG MODE: Joint %s has velocity %f",
+                     getNodeName().c_str(), joint_vel.first.c_str(), joint_vel.second);
+        }
+
         // check for velocity limit
         if( abs(joint_vel.second) >= JOINT_VELOCITY_LIMIT_ ) {
             // update flag
@@ -127,6 +137,12 @@ bool JointMonitorNode::checkVelocityTorqueLimits() {
 
     // look through available torque information
     for( const std::pair<std::string, double>& joint_trq : joint_torques_ ) {
+        // print joint torque
+        if( debug_ ) {
+            ROS_INFO("[%s] DEBUG MODE: Joint %s has torque %f",
+                     getNodeName().c_str(), joint_trq.first.c_str(), joint_trq.second);
+        }
+
         // check for torque limit
         if( abs(joint_trq.second) >= JOINT_TORQUE_LIMIT_ ) {
             // update flag
