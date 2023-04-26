@@ -1,10 +1,10 @@
 /**
- * End-Effector Monitor Node
+ * End-Effector Streaming Monitor Node
  * Emily Sheetz, NSTGRO VTE 2023
  **/
 
-#ifndef _END_EFFECTOR_MONITOR_NODE_H_
-#define _END_EFFECTOR_MONITOR_NODE_H_
+#ifndef _END_EFFECTOR_STREAMING_MONITOR_NODE_H_
+#define _END_EFFECTOR_STREAMING_MONITOR_NODE_H_
 
 #include <map>
 #include <utility> // std::pair
@@ -21,7 +21,7 @@
 #include <dynamic_reconfigure/server.h>
 #include <val_soft_estop_monitor/EndEffectorMonitorParamsConfig.h>
 
-#include <monitors/generic_monitor_node.h>
+#include <monitors/end_effector_monitor.h>
 
 // IHMC Hashes for controllable end effectors
 #define WORLD_FRAME_HASH 83766130
@@ -36,12 +36,12 @@
 #define UPPER_NECK_HASH 144630990
 // from val_vr_ros/teleop_control.h
 
-class EndEffectorMonitorNode : public GenericMonitorNode
+class EndEffectorStreamingMonitorNode : public EndEffectorMonitor
 {
 public:
     // CONSTRUCTORS/DESTRUCTORS
-    EndEffectorMonitorNode();
-    ~EndEffectorMonitorNode();
+    EndEffectorStreamingMonitorNode();
+    ~EndEffectorStreamingMonitorNode();
 
     // INITIALIZATION
     void initializeMonitor(const ros::NodeHandle& nh) override;

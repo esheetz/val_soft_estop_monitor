@@ -16,9 +16,9 @@
 #include <dynamic_reconfigure/server.h>
 #include <val_soft_estop_monitor/JointMonitorParamsConfig.h>
 
-#include <monitors/generic_monitor_node.h>
+#include <monitors/generic_monitor.h>
 
-class JointMonitorNode : public GenericMonitorNode
+class JointMonitorNode : public GenericMonitor
 {
 public:
 	// CONSTRUCTORS/DESTRUCTORS

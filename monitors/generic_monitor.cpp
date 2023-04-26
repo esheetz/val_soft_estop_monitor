@@ -1,12 +1,12 @@
 /**
- * Generic Monitor Node
+ * Generic Monitor
  * Emily Sheetz, NSTGRO VTE 2023
  **/
 
-#include <monitors/generic_monitor_node.h>
+#include <monitors/generic_monitor.h>
 
 // CONSTRUCTORS/DESTRUCTORS
-GenericMonitorNode::GenericMonitorNode() {
+GenericMonitor::GenericMonitor() {
     loop_rate_ = 10.0; // Hz
 
     ihmc_interface_pause_stop_msg_counter_ = 0;
@@ -14,12 +14,12 @@ GenericMonitorNode::GenericMonitorNode() {
     debug_ = false;
 }
 
-GenericMonitorNode::~GenericMonitorNode() {
+GenericMonitor::~GenericMonitor() {
     ROS_INFO("[Generic Monitor] Destroyed");
 }
 
 // INITIALIZATION
-void GenericMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
+void GenericMonitor::initializeMonitor(const ros::NodeHandle& nh) {
     nh_ = nh;
 
     initializeConnections();
@@ -30,7 +30,7 @@ void GenericMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
 }
 
 // CONNECTIONS
-bool GenericMonitorNode::initializeConnections() {
+bool GenericMonitor::initializeConnections() {
     // status publisher for soft estops
     ihmc_interface_status_pub_ = nh_.advertise<std_msgs::String>("/IHMCInterfaceNode/controllers/output/ihmc/controller_status", 100);
 
@@ -38,12 +38,12 @@ bool GenericMonitorNode::initializeConnections() {
 }
 
 // GETTERS/SETTERS
-double GenericMonitorNode::getLoopRate() {
+double GenericMonitor::getLoopRate() {
     return loop_rate_;
 }
 
 // HELPERS
-double GenericMonitorNode::computePositionDistance(geometry_msgs::Point pos1, geometry_msgs::Point pos2) {
+double GenericMonitor::computePositionDistance(geometry_msgs::Point pos1, geometry_msgs::Point pos2) {
     // initialize Euclidean distance
     double dist = 0.0;
 
@@ -58,7 +58,7 @@ double GenericMonitorNode::computePositionDistance(geometry_msgs::Point pos1, ge
     return dist;
 }
 
-double GenericMonitorNode::computeRotationDistance(geometry_msgs::Quaternion quat1, geometry_msgs::Quaternion quat2) {
+double GenericMonitor::computeRotationDistance(geometry_msgs::Quaternion quat1, geometry_msgs::Quaternion quat2) {
     /*
      * NOTE: rotation distance here is computed as the angular distance between given quaternions;
      *       put another way, the rotation distance is the angle part of the axis-angle difference quaternion
@@ -92,7 +92,7 @@ double GenericMonitorNode::computeRotationDistance(geometry_msgs::Quaternion qua
     return dist;
 }
 
-bool GenericMonitorNode::lookupEEWorldPose(std::string ee_name, geometry_msgs::Pose& ee_pose) {
+bool GenericMonitor::lookupEEWorldPose(std::string ee_name, geometry_msgs::Pose& ee_pose) {
     // initialize error message and world transform
     std::string world_frame = std::string("world");
     std::string err_msg;
@@ -133,19 +133,19 @@ bool GenericMonitorNode::lookupEEWorldPose(std::string ee_name, geometry_msgs::P
     return true;
 }
 
-void GenericMonitorNode::initializeMessageCounter() {
+void GenericMonitor::initializeMessageCounter() {
     ihmc_interface_pause_stop_msg_counter_ = 5;
 
     return;
 }
 
-void GenericMonitorNode::decrementMessageCounter() {
+void GenericMonitor::decrementMessageCounter() {
     ihmc_interface_pause_stop_msg_counter_--;
 
     return;
 }
 
-void GenericMonitorNode::publishPauseWalkingMessage() {
+void GenericMonitor::publishPauseWalkingMessage() {
     // create string message
     std_msgs::String str_msg;
     str_msg.data = std::string("PAUSE-WALKING");
@@ -157,7 +157,7 @@ void GenericMonitorNode::publishPauseWalkingMessage() {
     return;
 }
 
-void GenericMonitorNode::publishStopWalkingMessage() {
+void GenericMonitor::publishStopWalkingMessage() {
     // create string message
     std_msgs::String str_msg;
     str_msg.data = std::string("STOP-ALL-TRAJECTORY");
@@ -170,7 +170,7 @@ void GenericMonitorNode::publishStopWalkingMessage() {
 }
 
 // MONITOR FUNCTIONS
-void GenericMonitorNode::performSoftEStop() {
+void GenericMonitor::performSoftEStop() {
     // check for velocity and torque limits
     if( checkMonitorCondition() ) {
         // check if limit already detected

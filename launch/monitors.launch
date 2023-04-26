@@ -15,12 +15,12 @@
 		<!--<param name="" type="" value=""/> -->
 	</node>
 
-	<!-- ***** END-EFFECTOR MONITOR ***** -->
+	<!-- ***** END-EFFECTOR STREAMING MONITOR ***** -->
 
 	<!-- parameters for specifying end-effector streaming topic -->
 	<arg name="ee_streaming_topic" default="/ihmc/valkyrie/toolbox/ik_streaming/input/kinematics_streaming_toolbox_input"/>
 
-	<node pkg="val_soft_estop_monitor" type="end_effector_monitor_node" name="ValkyrieEndEffectorMonitorNode" output="screen">
+	<node pkg="val_soft_estop_monitor" type="end_effector_streaming_monitor_node" name="ValkyrieEndEffectorStreamingMonitorNode" output="screen">
 		<param name="ee_streaming_topic" type="string" value="$(arg ee_streaming_topic)"/>
 		<!--<param name="" type="" value=""/> -->
 	</node>

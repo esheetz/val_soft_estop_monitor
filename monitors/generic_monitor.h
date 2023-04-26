@@ -1,10 +1,10 @@
 /**
- * Generic Monitor Node
+ * Generic Monitor
  * Emily Sheetz, NSTGRO VTE 2023
  **/
 
-#ifndef _GENERIC_MONITOR_NODE_H_
-#define _GENERIC_MONITOR_NODE_H_
+#ifndef _GENERIC_MONITOR_H_
+#define _GENERIC_MONITOR_H_
 
 #include <cmath> // pow()
 #include <map>
@@ -20,12 +20,12 @@
 
 #include <dynamic_reconfigure/server.h>
 
-class GenericMonitorNode
+class GenericMonitor
 {
 public:
     // CONSTRUCTORS/DESTRUCTORS
-    GenericMonitorNode();
-    virtual ~GenericMonitorNode();
+    GenericMonitor();
+    virtual ~GenericMonitor();
 
     // INITIALIZATION
     virtual void initializeMonitor(const ros::NodeHandle& nh);

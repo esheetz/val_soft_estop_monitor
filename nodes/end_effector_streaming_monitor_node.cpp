@@ -1,12 +1,12 @@
 /**
- * End-Effector Monitor Node
+ * End-Effector Streaming Monitor Node
  * Emily Sheetz, NSTGRO VTE 2023
  **/
 
-#include <nodes/end_effector_monitor_node.h>
+#include <nodes/end_effector_streaming_monitor_node.h>
 
 // CONSTRUCTORS/DESTRUCTORS
-EndEffectorMonitorNode::EndEffectorMonitorNode() {
+EndEffectorStreamingMonitorNode::EndEffectorStreamingMonitorNode() {
     // initialize hand and head delta limits to some default
     EE_HAND_POS_DELTA_LIMIT_ = 10.0;
     EE_HAND_ORI_DELTA_LIMIT_ = 10.0;
@@ -22,13 +22,13 @@ EndEffectorMonitorNode::EndEffectorMonitorNode() {
     ROS_INFO("[%s] Constructed", getNodeName().c_str());
 }
 
-EndEffectorMonitorNode::~EndEffectorMonitorNode() {
+EndEffectorStreamingMonitorNode::~EndEffectorStreamingMonitorNode() {
     ROS_INFO("[%s] Destroyed", getNodeName().c_str());
 }
 
 // INITIALIZATION
-void EndEffectorMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
-    GenericMonitorNode::initializeMonitor(nh);
+void EndEffectorStreamingMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
+    GenericMonitor::initializeMonitor(nh);
 
     // set up parameters
     nh_.param("ee_streaming_topic", desired_ee_pose_topic_, std::string("/ihmc/valkyrie/toolbox/ik_streaming/input/kinematics_streaming_toolbox_input"));
@@ -45,11 +45,11 @@ void EndEffectorMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
 }
 
 // CONNECTIONS
-bool EndEffectorMonitorNode::initializeConnections() {
-    GenericMonitorNode::initializeConnections();
+bool EndEffectorStreamingMonitorNode::initializeConnections() {
+    GenericMonitor::initializeConnections();
 
     // end-effector streaming subscriber
-    desired_ee_pose_sub_ = nh_.subscribe(desired_ee_pose_topic_, 1, &EndEffectorMonitorNode::desiredEEPoseCallback, this);
+    desired_ee_pose_sub_ = nh_.subscribe(desired_ee_pose_topic_, 1, &EndEffectorStreamingMonitorNode::desiredEEPoseCallback, this);
 
     // streaming control state publisher
     control_state_pub_ = nh_.advertise<val_vr_ros::ControlState>("/vr/control_state", 1);
@@ -58,12 +58,12 @@ bool EndEffectorMonitorNode::initializeConnections() {
 }
 
 // DYNAMIC RECONFIGURE SERVER
-void EndEffectorMonitorNode::initializeDynamicReconfigureServer() {
+void EndEffectorStreamingMonitorNode::initializeDynamicReconfigureServer() {
     // initialize callback type
     dynamic_reconfigure::Server<val_soft_estop_monitor::EndEffectorMonitorParamsConfig>::CallbackType f;
 
     // bind function to callback
-    f = boost::bind(&EndEffectorMonitorNode::paramReconfigureCallback, this, _1, _2);
+    f = boost::bind(&EndEffectorStreamingMonitorNode::paramReconfigureCallback, this, _1, _2);
 
     // set callback for server
     reconfigure_server_.setCallback(f);
@@ -72,7 +72,7 @@ void EndEffectorMonitorNode::initializeDynamicReconfigureServer() {
 }
 
 // CALLBACKS
-void EndEffectorMonitorNode::paramReconfigureCallback(val_soft_estop_monitor::EndEffectorMonitorParamsConfig &config, uint32_t level) {
+void EndEffectorStreamingMonitorNode::paramReconfigureCallback(val_soft_estop_monitor::EndEffectorMonitorParamsConfig &config, uint32_t level) {
     // take params from reconfigure request and store them internally
     debug_ = config.debug;
     EE_HAND_POS_DELTA_LIMIT_ = config.ee_hand_pos_delta_limit;
@@ -91,7 +91,7 @@ void EndEffectorMonitorNode::paramReconfigureCallback(val_soft_estop_monitor::En
     return;
 }
 
-void EndEffectorMonitorNode::desiredEEPoseCallback(const controller_msgs::KinematicsStreamingToolboxInputMessage& msg) {
+void EndEffectorStreamingMonitorNode::desiredEEPoseCallback(const controller_msgs::KinematicsStreamingToolboxInputMessage& msg) {
     // check if streaming to controller
     if( msg.stream_to_controller ) {
         // streaming to controller, clear out map and loop through received inputs
@@ -125,12 +125,12 @@ void EndEffectorMonitorNode::desiredEEPoseCallback(const controller_msgs::Kinema
 }
 
 // GETTERS/SETTERS
-std::string EndEffectorMonitorNode::getNodeName() {
+std::string EndEffectorStreamingMonitorNode::getNodeName() {
     return std::string("End-Effector Monitor Node");
 }
 
 // HELPERS
-void EndEffectorMonitorNode::publishFreezeControlStateMessage() {
+void EndEffectorStreamingMonitorNode::publishFreezeControlStateMessage() {
     // initialize message
     val_vr_ros::ControlState freeze_msg;
 
@@ -154,7 +154,7 @@ void EndEffectorMonitorNode::publishFreezeControlStateMessage() {
     return;
 }
 
-void EndEffectorMonitorNode::publishAllSoftEStopMessages() {
+void EndEffectorStreamingMonitorNode::publishAllSoftEStopMessages() {
     // publish pause walking and stop trajectory messages
     publishPauseWalkingMessage();
     publishStopWalkingMessage();
@@ -166,11 +166,11 @@ void EndEffectorMonitorNode::publishAllSoftEStopMessages() {
 }
 
 // MONITOR FUNCTIONS
-bool EndEffectorMonitorNode::checkMonitorCondition() {
+bool EndEffectorStreamingMonitorNode::checkMonitorCondition() {
     return checkEndEffectorDeltas();
 }
 
-bool EndEffectorMonitorNode::checkEndEffectorDeltas() {
+bool EndEffectorStreamingMonitorNode::checkEndEffectorDeltas() {
     // verify some desired pose information has been received
     if( !desired_ee_poses_received_ ) {
         // no information received, no limits reached
@@ -223,7 +223,7 @@ bool EndEffectorMonitorNode::checkEndEffectorDeltas() {
     return limit_found;
 }
 
-bool EndEffectorMonitorNode::checkEndEffectorPositionLimit(double pos_dist, std::string ee_name) {
+bool EndEffectorStreamingMonitorNode::checkEndEffectorPositionLimit(double pos_dist, std::string ee_name) {
     // check for end-effector
     if( (ee_name == std::string("leftPalm")) || (ee_name == std::string("rightPalm")) ) {
         // check for hand position limit
@@ -240,7 +240,7 @@ bool EndEffectorMonitorNode::checkEndEffectorPositionLimit(double pos_dist, std:
     }
 }
 
-bool EndEffectorMonitorNode::checkEndEffectorPositionLimit(double pos_dist, double dist_limit, std::string ee_name) {
+bool EndEffectorStreamingMonitorNode::checkEndEffectorPositionLimit(double pos_dist, double dist_limit, std::string ee_name) {
     // check for limit
     if( pos_dist >= dist_limit ) {
         ROS_WARN("[%s] End-effector %s is %f meters away from desired position, which exceeds limit %f",
@@ -252,7 +252,7 @@ bool EndEffectorMonitorNode::checkEndEffectorPositionLimit(double pos_dist, doub
     }
 }
 
-bool EndEffectorMonitorNode::checkEndEffectorRotationLimit(double rot_dist, std::string ee_name) {
+bool EndEffectorStreamingMonitorNode::checkEndEffectorRotationLimit(double rot_dist, std::string ee_name) {
     // check for end-effector
     if( (ee_name == std::string("leftPalm")) || (ee_name == std::string("rightPalm")) ) {
         // check for hand rotation limit
@@ -269,7 +269,7 @@ bool EndEffectorMonitorNode::checkEndEffectorRotationLimit(double rot_dist, std:
     }
 }
 
-bool EndEffectorMonitorNode::checkEndEffectorRotationLimit(double rot_dist, double dist_limit, std::string ee_name) {
+bool EndEffectorStreamingMonitorNode::checkEndEffectorRotationLimit(double rot_dist, double dist_limit, std::string ee_name) {
     // check for limit
     if( rot_dist >= dist_limit ) {
         ROS_WARN("[%s] End-effector %s is %f radians away from desired orientation, which exceeds limit %f",
@@ -283,13 +283,13 @@ bool EndEffectorMonitorNode::checkEndEffectorRotationLimit(double rot_dist, doub
 
 int main(int argc, char **argv) {
     // initialize node
-    ros::init(argc, argv, "ValkyrieEndEffectorMonitorNode");
+    ros::init(argc, argv, "ValkyrieEndEffectorStreamingMonitorNode");
 
     // initialize node handler
     ros::NodeHandle nh("~");
 
     // create and initialize node
-    EndEffectorMonitorNode ee_monitor;
+    EndEffectorStreamingMonitorNode ee_monitor;
     ee_monitor.initializeMonitor(nh);
     ROS_INFO("[%s] Node started!", ee_monitor.getNodeName().c_str());
 

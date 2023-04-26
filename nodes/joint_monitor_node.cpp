@@ -21,7 +21,7 @@ JointMonitorNode::~JointMonitorNode() {
 
 // INITIALIZATION
 void JointMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
-    GenericMonitorNode::initializeMonitor(nh);
+    GenericMonitor::initializeMonitor(nh);
 
     // set up parameters
     nh_.param("joint_state_topic", joint_state_topic_, std::string("/ihmc_ros/valkyrie/output/joint_states"));
@@ -39,7 +39,7 @@ void JointMonitorNode::initializeMonitor(const ros::NodeHandle& nh) {
 
 // CONNECTIONS
 bool JointMonitorNode::initializeConnections() {
-    GenericMonitorNode::initializeConnections();
+    GenericMonitor::initializeConnections();
 
     // joint state subscriber
     joint_state_sub_ = nh_.subscribe(joint_state_topic_, 1, &JointMonitorNode::jointStateCallback, this);
