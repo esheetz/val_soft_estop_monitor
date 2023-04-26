@@ -24,11 +24,11 @@ class EndEffectorMonitor : public GenericMonitor
 {
 public:
     // CONSTRUCTORS/DESTRUCTORS
-    EndEffectorStreamingMonitorNode();
-    ~EndEffectorStreamingMonitorNode();
+    EndEffectorMonitor();
+    ~EndEffectorMonitor();
 
     // INITIALIZATION
-    void initializeMonitor(const ros::NodeHandle& nh) override;
+    virtual void initializeMonitor(const ros::NodeHandle& nh) override;
 
     // CONNECTIONS
     bool initializeConnections() override;
@@ -43,7 +43,7 @@ public:
     std::string getNodeName() override;
 
     // HELPERS
-    void publishAllSoftEStopMessages() override;
+    virtual void publishAllSoftEStopMessages() = 0;
 
     // MONITOR FUNCTIONS
     bool checkMonitorCondition() override;
@@ -54,10 +54,6 @@ public:
     bool checkEndEffectorRotationLimit(double rot_dist, double dist_limit, std::string ee_name);
 
 protected:
-    std::string desired_ee_pose_topic_; // topic for listening to desired end-effector poses
-    ros::Subscriber desired_ee_pose_sub_; // subscriber for listening to desired end-effector poses
-    ros::Publisher control_state_pub_; // publisher for streaming control state
-
     // dynamic reconfigure server
     dynamic_reconfigure::Server<val_soft_estop_monitor::EndEffectorMonitorParamsConfig> reconfigure_server_;
 

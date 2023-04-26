@@ -49,11 +49,7 @@ public:
     // CONNECTIONS
     bool initializeConnections() override;
 
-    // DYNAMIC RECONFIGURE SERVER
-    void initializeDynamicReconfigureServer() override;
-
     // CALLBACKS
-    void paramReconfigureCallback(val_soft_estop_monitor::EndEffectorMonitorParamsConfig &config, uint32_t level);
     void desiredEEPoseCallback(const controller_msgs::KinematicsStreamingToolboxInputMessage& msg);
 
     // GETTERS/SETTERS
@@ -63,34 +59,13 @@ public:
     void publishFreezeControlStateMessage();
     void publishAllSoftEStopMessages() override;
 
-    // MONITOR FUNCTIONS
-    bool checkMonitorCondition() override;
-    bool checkEndEffectorDeltas();
-    bool checkEndEffectorPositionLimit(double pos_dist, std::string ee_name);
-    bool checkEndEffectorPositionLimit(double pos_dist, double dist_limit, std::string ee_name);
-    bool checkEndEffectorRotationLimit(double rot_dist, std::string ee_name);
-    bool checkEndEffectorRotationLimit(double rot_dist, double dist_limit, std::string ee_name);
-
 private:
     std::string desired_ee_pose_topic_; // topic for listening to desired end-effector poses
     ros::Subscriber desired_ee_pose_sub_; // subscriber for listening to desired end-effector poses
     ros::Publisher control_state_pub_; // publisher for streaming control state
 
-    // dynamic reconfigure server
-    dynamic_reconfigure::Server<val_soft_estop_monitor::EndEffectorMonitorParamsConfig> reconfigure_server_;
-
     // internal storage for monitored end-effectors
     std::map<int, std::string> ee_hash_to_name_;
-
-    // internal storage for desired end-effector poses
-    std::map<std::string, geometry_msgs::Pose> desired_ee_poses_;
-    bool desired_ee_poses_received_;
-
-    // limits for distances between hand/head position and orientation; can be dynamically reconfigured
-    double EE_HAND_POS_DELTA_LIMIT_;
-    double EE_HAND_ORI_DELTA_LIMIT_;
-    double EE_HEAD_POS_DELTA_LIMIT_;
-    double EE_HEAD_ORI_DELTA_LIMIT_;
 };
 
 #endif
