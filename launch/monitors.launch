@@ -5,12 +5,18 @@
 ************************************************************-->
 <launch>
 	
-	<!-- ***** JOINT MONITOR ***** -->
+	<!-- ***** JOINT STATE MONITOR ***** -->
 
 	<!-- parameters for specifying joint state topic -->
 	<arg name="joint_state_topic" default="/ihmc_ros/valkyrie/output/joint_states"/>
 
-	<node pkg="val_soft_estop_monitor" type="joint_monitor_node" name="ValkyrieJointMonitorNode" output="screen">
+	<node pkg="val_soft_estop_monitor" type="joint_state_monitor_node" name="ValkyrieJointStateMonitorNode" output="screen">
+		<param name="joint_state_topic" type="string" value="$(arg joint_state_topic)"/>
+		<!--<param name="" type="" value=""/> -->
+	</node>
+
+	<!-- ***** JOINT STATE DELTA MONITOR ***** -->
+	<node pkg="val_soft_estop_monitor" type="joint_state_delta_monitor_node" name="ValkyrieJointStateDeltaMonitorNode" output="screen">
 		<param name="joint_state_topic" type="string" value="$(arg joint_state_topic)"/>
 		<!--<param name="" type="" value=""/> -->
 	</node>

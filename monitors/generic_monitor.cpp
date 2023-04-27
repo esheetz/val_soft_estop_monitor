@@ -12,6 +12,8 @@ GenericMonitor::GenericMonitor() {
     ihmc_interface_pause_stop_msg_counter_ = 0;
 
     debug_ = false;
+
+    ROS_INFO("[Generic Monitor] Constructed");
 }
 
 GenericMonitor::~GenericMonitor() {
@@ -24,7 +26,7 @@ void GenericMonitor::initializeMonitor(const ros::NodeHandle& nh) {
 
     initializeConnections();
 
-    ROS_INFO("[Generic Monitor] Constructed");
+    ROS_INFO("[Generic Monitor] Initialized");
 
     return;
 }

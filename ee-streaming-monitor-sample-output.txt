@@ -1,0 +1,682 @@
+[ WARN] [1682532220.035615629]: [End-Effector Monitor Node] End-effector leftPalm is 2.684154 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532220.035756244]: [End-Effector Monitor Node] End-effector rightPalm is 2.889407 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532220.035841630]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532220.635260917]: [End-Effector Monitor Node] End-effector leftPalm is 2.689724 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532220.635365162]: [End-Effector Monitor Node] End-effector rightPalm is 2.887513 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532220.635448469]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532221.235281673]: [End-Effector Monitor Node] End-effector leftPalm is 2.699827 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532221.235386317]: [End-Effector Monitor Node] End-effector rightPalm is 2.903173 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532221.235464590]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532221.835269602]: [End-Effector Monitor Node] End-effector leftPalm is 2.678010 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532221.835357431]: [End-Effector Monitor Node] End-effector rightPalm is 2.961310 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532221.835416460]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532222.435272976]: [End-Effector Monitor Node] End-effector leftPalm is 2.621341 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532222.435371762]: [End-Effector Monitor Node] End-effector rightPalm is 3.092429 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532222.435467947]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.604597 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532222.435514657]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532223.035309540]: [End-Effector Monitor Node] End-effector leftPalm is 2.625544 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532223.035433295]: [End-Effector Monitor Node] End-effector rightPalm is 3.020707 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532223.035550977]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532223.635288321]: [End-Effector Monitor Node] End-effector leftPalm is 2.647806 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532223.635411115]: [End-Effector Monitor Node] End-effector rightPalm is 2.968412 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532223.635519460]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532224.235274685]: [End-Effector Monitor Node] End-effector leftPalm is 2.661261 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532224.235368284]: [End-Effector Monitor Node] End-effector rightPalm is 2.939708 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532224.235433194]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532224.835260397]: [End-Effector Monitor Node] End-effector leftPalm is 2.664648 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532224.835357761]: [End-Effector Monitor Node] End-effector rightPalm is 2.932061 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532224.835427079]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532225.435310897]: [End-Effector Monitor Node] End-effector leftPalm is 2.608353 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532225.435441869]: [End-Effector Monitor Node] End-effector rightPalm is 2.896267 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532225.435538994]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532226.035321573]: [End-Effector Monitor Node] End-effector leftPalm is 2.574954 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532226.035456958]: [End-Effector Monitor Node] End-effector rightPalm is 2.923300 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532226.035562690]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532226.635263800]: [End-Effector Monitor Node] End-effector leftPalm is 2.557528 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532226.635362539]: [End-Effector Monitor Node] End-effector rightPalm is 2.988861 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532226.635466111]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532227.235325736]: [End-Effector Monitor Node] End-effector leftPalm is 2.555494 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532227.235462832]: [End-Effector Monitor Node] End-effector rightPalm is 2.993568 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532227.235580156]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532227.835243702]: [End-Effector Monitor Node] End-effector leftPalm is 2.563381 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532227.835309698]: [End-Effector Monitor Node] End-effector rightPalm is 2.957232 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532227.835367333]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532228.435286120]: [End-Effector Monitor Node] End-effector leftPalm is 2.411024 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532228.435367247]: [End-Effector Monitor Node] End-effector rightPalm is 2.950660 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532228.435426677]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532229.035279762]: [End-Effector Monitor Node] End-effector leftPalm is 2.342600 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532229.035377809]: [End-Effector Monitor Node] End-effector rightPalm is 2.929576 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532229.035451863]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532229.635268287]: [End-Effector Monitor Node] End-effector leftPalm is 2.275941 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532229.635360690]: [End-Effector Monitor Node] End-effector rightPalm is 2.909784 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532229.635423411]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532230.235261250]: [End-Effector Monitor Node] End-effector leftPalm is 2.230044 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532230.235351739]: [End-Effector Monitor Node] End-effector rightPalm is 2.906952 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532230.235419068]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532230.835288262]: [End-Effector Monitor Node] End-effector leftPalm is 2.261280 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532230.835378798]: [End-Effector Monitor Node] End-effector rightPalm is 2.910841 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532230.835446261]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532231.435265151]: [End-Effector Monitor Node] End-effector leftPalm is 2.209363 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532231.435350937]: [End-Effector Monitor Node] End-effector rightPalm is 2.911513 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532231.435412967]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532232.035288657]: [End-Effector Monitor Node] End-effector leftPalm is 2.193952 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532232.035383285]: [End-Effector Monitor Node] End-effector rightPalm is 2.908218 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532232.035451274]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532232.635274299]: [End-Effector Monitor Node] End-effector leftPalm is 2.199204 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532232.635365651]: [End-Effector Monitor Node] End-effector rightPalm is 2.910887 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532232.635423749]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532233.235259545]: [End-Effector Monitor Node] End-effector leftPalm is 2.210897 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532233.235355758]: [End-Effector Monitor Node] End-effector rightPalm is 2.906523 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532233.235415421]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532233.835258956]: [End-Effector Monitor Node] End-effector leftPalm is 2.112665 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532233.835343252]: [End-Effector Monitor Node] End-effector rightPalm is 2.838542 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532233.835404314]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532234.435274942]: [End-Effector Monitor Node] End-effector leftPalm is 2.271671 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532234.435366481]: [End-Effector Monitor Node] End-effector rightPalm is 2.646125 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532234.435437812]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532235.035272322]: [End-Effector Monitor Node] End-effector leftPalm is 2.312280 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532235.035403986]: [End-Effector Monitor Node] End-effector rightPalm is 2.444396 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532235.035500141]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532235.635246846]: [End-Effector Monitor Node] End-effector leftPalm is 2.348736 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532235.635319981]: [End-Effector Monitor Node] End-effector rightPalm is 2.088768 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532235.635369276]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532236.235294828]: [End-Effector Monitor Node] End-effector leftPalm is 2.369787 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532236.235409006]: [End-Effector Monitor Node] End-effector rightPalm is 1.752401 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532236.235471896]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532236.835273550]: [End-Effector Monitor Node] End-effector leftPalm is 2.513310 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532236.835428911]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532237.435249782]: [End-Effector Monitor Node] End-effector leftPalm is 2.600929 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532237.435347890]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532238.035313150]: [End-Effector Monitor Node] End-effector leftPalm is 2.558491 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532238.035459701]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532238.635265936]: [End-Effector Monitor Node] End-effector leftPalm is 2.245851 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532238.635425391]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532239.235272109]: [End-Effector Monitor Node] End-effector leftPalm is 2.227926 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532239.235402873]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.603206 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532239.235437955]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532239.835247124]: [End-Effector Monitor Node] End-effector leftPalm is 2.359966 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532239.835348804]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532240.435246577]: [End-Effector Monitor Node] End-effector leftPalm is 2.295767 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532240.435385105]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532241.035263462]: [End-Effector Monitor Node] End-effector leftPalm is 2.255403 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532241.035365164]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.620044 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532241.035400880]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532241.635270810]: [End-Effector Monitor Node] End-effector leftPalm is 2.148788 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532241.635379163]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.618987 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532241.635421011]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532242.235264079]: [End-Effector Monitor Node] End-effector leftPalm is 2.104594 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532242.235371862]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.605709 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532242.235417079]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532242.835231722]: [End-Effector Monitor Node] End-effector leftPalm is 2.166985 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532242.835302869]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.646283 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532242.835322307]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532243.435275567]: [End-Effector Monitor Node] End-effector leftPalm is 2.157402 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532243.435401304]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.658987 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532243.435433527]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532244.035277108]: [End-Effector Monitor Node] End-effector leftPalm is 2.177251 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532244.035379088]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.656260 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532244.035408600]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532244.635261940]: [End-Effector Monitor Node] End-effector leftPalm is 2.174354 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532244.635391991]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.654654 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532244.635424292]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532245.235279483]: [End-Effector Monitor Node] End-effector leftPalm is 2.123279 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532245.235422662]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.658433 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532245.235480581]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532245.835272805]: [End-Effector Monitor Node] End-effector leftPalm is 2.166959 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532245.835387480]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.662873 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532245.835418349]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532246.435252094]: [End-Effector Monitor Node] End-effector leftPalm is 2.217899 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532246.435350982]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.666670 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532246.435387102]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532247.035246139]: [End-Effector Monitor Node] End-effector leftPalm is 2.215229 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532247.035325827]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.679892 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532247.035348858]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532247.635233869]: [End-Effector Monitor Node] End-effector leftPalm is 2.199708 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532247.635317180]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.646087 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532247.635338715]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532248.235243262]: [End-Effector Monitor Node] End-effector leftPalm is 2.114027 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532248.235342320]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.623535 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532248.235369138]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532248.835256583]: [End-Effector Monitor Node] End-effector leftPalm is 2.131957 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532248.835379946]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.609309 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532248.835422579]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532249.435261803]: [End-Effector Monitor Node] End-effector leftPalm is 2.066818 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532249.435371733]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532250.035291166]: [End-Effector Monitor Node] End-effector leftPalm is 1.964311 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532250.035445058]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.623488 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532250.035502684]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532250.637458746]: [End-Effector Monitor Node] End-effector leftPalm is 1.939575 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532250.637602479]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.631653 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532250.637625734]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532251.235262372]: [End-Effector Monitor Node] End-effector leftPalm is 1.891299 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532251.235402923]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.643109 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532251.235455614]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532251.835298084]: [End-Effector Monitor Node] End-effector leftPalm is 1.839308 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532251.835402693]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.643074 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532251.835432163]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532252.435281172]: [End-Effector Monitor Node] End-effector leftPalm is 1.661542 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532252.435397711]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.641493 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532252.435431657]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532253.035318123]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.623101 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532253.035376542]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532253.635303207]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.620257 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532253.635357994]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532254.235316651]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.612192 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532254.235364951]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532254.835329442]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.611523 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532254.835391094]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532255.435294295]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.609920 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532255.435341301]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532256.235333956]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.601889 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532256.235388106]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532258.335355443]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.600218 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532258.335414735]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532258.935345280]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.600285 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532258.935401523]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532260.935293622]: [End-Effector Monitor Node] End-effector leftPalm is 1.624397 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532260.935395517]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532262.835273878]: [End-Effector Monitor Node] End-effector leftPalm is 1.604025 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532262.835396313]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532263.435289589]: [End-Effector Monitor Node] End-effector leftPalm is 1.619946 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532263.435407025]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532264.035307069]: [End-Effector Monitor Node] End-effector leftPalm is 1.857360 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532264.035417403]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532264.635255878]: [End-Effector Monitor Node] End-effector leftPalm is 1.880811 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532264.635348981]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532265.235315078]: [End-Effector Monitor Node] End-effector leftPalm is 1.832336 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532265.235422944]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532265.835251934]: [End-Effector Monitor Node] End-effector leftPalm is 1.808979 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532265.835351192]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.623995 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532265.835377586]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532266.435303321]: [End-Effector Monitor Node] End-effector leftPalm is 1.770908 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532266.435430530]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.634029 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532266.435463279]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532267.035278852]: [End-Effector Monitor Node] End-effector leftPalm is 1.743040 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532267.035397544]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.634257 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532267.035430028]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532267.635277132]: [End-Effector Monitor Node] End-effector leftPalm is 1.769438 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532267.635425352]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.619112 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532267.635472524]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532268.235280283]: [End-Effector Monitor Node] End-effector leftPalm is 1.775990 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532268.235416246]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.615261 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532268.235446453]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532268.835257057]: [End-Effector Monitor Node] End-effector leftPalm is 1.780471 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532268.835360167]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.609920 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532268.835388647]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532269.435254076]: [End-Effector Monitor Node] End-effector leftPalm is 1.849319 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532269.435369541]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.610097 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532269.435403666]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532270.035246262]: [End-Effector Monitor Node] End-effector leftPalm is 1.811693 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532270.035338663]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532270.635296397]: [End-Effector Monitor Node] End-effector leftPalm is 1.741034 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532270.635451066]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.604758 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532270.635506634]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532271.235282519]: [End-Effector Monitor Node] End-effector leftPalm is 1.671425 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532271.235444285]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.622991 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532271.235492236]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532271.835309260]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.610874 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532271.835362296]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532272.435284909]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.625169 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532272.435336706]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532273.035306671]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.633455 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532273.035356434]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532273.635309714]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.634616 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532273.635365577]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532274.235329335]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.624145 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532274.235382691]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532274.835337429]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.609135 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532274.835404018]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532275.435284736]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.606911 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532275.435329384]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532276.835304062]: [End-Effector Monitor Node] End-effector rightPalm is 1.602048 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532276.835425668]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532277.435306931]: [End-Effector Monitor Node] End-effector rightPalm is 2.178962 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532277.435404556]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532278.035314271]: [End-Effector Monitor Node] End-effector rightPalm is 2.574655 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532278.035411092]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532278.635285919]: [End-Effector Monitor Node] End-effector rightPalm is 2.434581 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532278.635396688]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532279.235299278]: [End-Effector Monitor Node] End-effector rightPalm is 2.197059 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532279.235395947]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532279.835276417]: [End-Effector Monitor Node] End-effector rightPalm is 2.097661 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532279.835386325]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532280.435295644]: [End-Effector Monitor Node] End-effector rightPalm is 2.037628 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532280.435389477]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532281.035306299]: [End-Effector Monitor Node] End-effector rightPalm is 1.796640 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532281.035404755]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532281.635343198]: [End-Effector Monitor Node] End-effector rightPalm is 1.808241 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532281.635428442]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532282.235274433]: [End-Effector Monitor Node] End-effector rightPalm is 1.841044 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532282.235370786]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532282.835288664]: [End-Effector Monitor Node] End-effector rightPalm is 1.913809 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532282.835368367]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532283.435294458]: [End-Effector Monitor Node] End-effector rightPalm is 2.013721 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532283.435396572]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532284.035283753]: [End-Effector Monitor Node] End-effector rightPalm is 1.680586 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532284.035370285]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532285.435285096]: [End-Effector Monitor Node] End-effector rightPalm is 1.617518 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532285.435365020]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532286.035339059]: [End-Effector Monitor Node] End-effector rightPalm is 2.057976 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532286.035441040]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532286.635308274]: [End-Effector Monitor Node] End-effector rightPalm is 2.188730 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532286.635405233]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532287.235350864]: [End-Effector Monitor Node] End-effector rightPalm is 1.965709 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532287.235442289]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532287.835294119]: [End-Effector Monitor Node] End-effector rightPalm is 1.890653 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532287.835405940]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532288.435282119]: [End-Effector Monitor Node] End-effector rightPalm is 1.866096 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532288.435370767]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532289.035273667]: [End-Effector Monitor Node] End-effector leftPalm is 1.739599 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532289.035377226]: [End-Effector Monitor Node] End-effector rightPalm is 1.867548 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532289.035470963]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532289.635270468]: [End-Effector Monitor Node] End-effector leftPalm is 1.695970 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532289.635350265]: [End-Effector Monitor Node] End-effector rightPalm is 1.942945 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532289.635406874]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532290.235294674]: [End-Effector Monitor Node] End-effector leftPalm is 1.648826 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532290.235409797]: [End-Effector Monitor Node] End-effector rightPalm is 1.807749 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532290.235537858]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532290.835249568]: [End-Effector Monitor Node] End-effector leftPalm is 1.642208 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532290.835326404]: [End-Effector Monitor Node] End-effector rightPalm is 1.768867 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532290.835407912]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532291.435277135]: [End-Effector Monitor Node] End-effector rightPalm is 1.788712 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532291.435370366]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532292.035257736]: [End-Effector Monitor Node] End-effector leftPalm is 1.610602 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532292.035354942]: [End-Effector Monitor Node] End-effector rightPalm is 1.980540 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532292.035441797]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532292.635249219]: [End-Effector Monitor Node] End-effector leftPalm is 1.687551 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532292.635322907]: [End-Effector Monitor Node] End-effector rightPalm is 1.813009 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532292.635372269]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532293.235264100]: [End-Effector Monitor Node] End-effector leftPalm is 1.802491 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532293.235370568]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532293.835285051]: [End-Effector Monitor Node] End-effector leftPalm is 1.887919 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532293.835393138]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532294.435258406]: [End-Effector Monitor Node] End-effector leftPalm is 1.908690 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532294.435351279]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532295.035352956]: [End-Effector Monitor Node] End-effector leftPalm is 1.955073 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532295.035507843]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532295.635283916]: [End-Effector Monitor Node] End-effector leftPalm is 1.975662 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532295.635387821]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532296.235270853]: [End-Effector Monitor Node] End-effector leftPalm is 1.887783 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532296.235392572]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532296.835331730]: [End-Effector Monitor Node] End-effector leftPalm is 1.857802 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532296.835471281]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532297.435262825]: [End-Effector Monitor Node] End-effector leftPalm is 1.826158 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532297.435354521]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532298.035360440]: [End-Effector Monitor Node] End-effector leftPalm is 1.709303 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532298.035535624]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532298.635272951]: [End-Effector Monitor Node] End-effector leftPalm is 1.698004 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532298.635377271]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532299.735228115]: [End-Effector Monitor Node] End-effector leftPalm is 1.623469 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532299.735295578]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532300.335213568]: [End-Effector Monitor Node] End-effector leftPalm is 1.713144 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532300.335318272]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532305.635273064]: [End-Effector Monitor Node] End-effector leftPalm is 1.605309 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532305.635386319]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532306.235271669]: [End-Effector Monitor Node] End-effector leftPalm is 1.609216 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532306.235361863]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532306.835258180]: [End-Effector Monitor Node] End-effector leftPalm is 1.667995 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532306.835358677]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532307.435285363]: [End-Effector Monitor Node] End-effector leftPalm is 1.730661 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532307.435397681]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532308.035276785]: [End-Effector Monitor Node] End-effector leftPalm is 1.724300 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532308.035444771]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532310.135264126]: [End-Effector Monitor Node] End-effector rightPalm is 1.606307 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532310.135334923]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532310.735303834]: [End-Effector Monitor Node] End-effector rightPalm is 1.657290 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532310.735406733]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532311.335263608]: [End-Effector Monitor Node] End-effector rightPalm is 1.748960 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532311.335352853]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532311.935273308]: [End-Effector Monitor Node] End-effector rightPalm is 1.724456 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532311.935365191]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532312.535294919]: [End-Effector Monitor Node] End-effector rightPalm is 1.736737 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532312.535377348]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532313.135277410]: [End-Effector Monitor Node] End-effector rightPalm is 1.775094 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532313.135381635]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532313.735313714]: [End-Effector Monitor Node] End-effector rightPalm is 1.842491 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532313.735401252]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532314.335283413]: [End-Effector Monitor Node] End-effector rightPalm is 1.829264 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532314.335379758]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532314.935318156]: [End-Effector Monitor Node] End-effector rightPalm is 1.822561 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532314.935402851]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532315.535312988]: [End-Effector Monitor Node] End-effector rightPalm is 1.790530 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532315.535388197]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532316.135282375]: [End-Effector Monitor Node] End-effector rightPalm is 1.852872 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532316.135349431]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532316.735298361]: [End-Effector Monitor Node] End-effector rightPalm is 1.863668 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532316.735377985]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532317.335259739]: [End-Effector Monitor Node] End-effector rightPalm is 1.913102 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532317.335327043]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532317.935271192]: [End-Effector Monitor Node] End-effector rightPalm is 1.862807 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532317.935341535]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532318.535290029]: [End-Effector Monitor Node] End-effector rightPalm is 1.851544 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532318.535397870]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532319.135311892]: [End-Effector Monitor Node] End-effector rightPalm is 1.857036 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532319.135407006]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532319.735308325]: [End-Effector Monitor Node] End-effector rightPalm is 1.851053 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532319.735389680]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532320.335275764]: [End-Effector Monitor Node] End-effector rightPalm is 1.852685 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532320.335351736]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532320.935250206]: [End-Effector Monitor Node] End-effector rightPalm is 1.844479 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532320.935340956]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532321.535369797]: [End-Effector Monitor Node] End-effector rightPalm is 1.830331 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532321.535478055]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532322.135321593]: [End-Effector Monitor Node] End-effector rightPalm is 1.827748 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532322.135421332]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532322.735305307]: [End-Effector Monitor Node] End-effector rightPalm is 1.756532 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532322.735381767]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532323.535250898]: [End-Effector Monitor Node] End-effector leftPalm is 1.635538 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532323.535357638]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532324.135291187]: [End-Effector Monitor Node] End-effector leftPalm is 2.009925 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532324.135401553]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532324.735277817]: [End-Effector Monitor Node] End-effector leftPalm is 2.272112 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532324.735388804]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532325.335243793]: [End-Effector Monitor Node] End-effector leftPalm is 2.317445 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532325.335342675]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532325.935268450]: [End-Effector Monitor Node] End-effector leftPalm is 2.385939 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532325.935411163]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532326.535271136]: [End-Effector Monitor Node] End-effector leftPalm is 2.429700 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532326.535369697]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532327.135269693]: [End-Effector Monitor Node] End-effector leftPalm is 2.334219 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532327.135359715]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532327.735237144]: [End-Effector Monitor Node] End-effector leftPalm is 2.318652 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532327.735338046]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532328.335206972]: [End-Effector Monitor Node] End-effector leftPalm is 2.342750 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532328.335319225]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532328.935249107]: [End-Effector Monitor Node] End-effector leftPalm is 2.302408 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532328.935337949]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532329.535277115]: [End-Effector Monitor Node] End-effector leftPalm is 2.256522 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532329.535363522]: [End-Effector Monitor Node] End-effector rightPalm is 1.847495 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532329.535416833]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532330.135224580]: [End-Effector Monitor Node] End-effector leftPalm is 2.214415 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532330.135295032]: [End-Effector Monitor Node] End-effector rightPalm is 1.834321 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532330.135336106]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532330.735238897]: [End-Effector Monitor Node] End-effector leftPalm is 2.290715 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532330.735299178]: [End-Effector Monitor Node] End-effector rightPalm is 1.806193 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532330.735332193]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532331.335288933]: [End-Effector Monitor Node] End-effector leftPalm is 2.326355 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532331.335375729]: [End-Effector Monitor Node] End-effector rightPalm is 1.682759 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532331.335437104]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532331.935292283]: [End-Effector Monitor Node] End-effector leftPalm is 2.303342 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532331.935406925]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532332.535300121]: [End-Effector Monitor Node] End-effector leftPalm is 2.261831 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532332.535420260]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532333.135265350]: [End-Effector Monitor Node] End-effector leftPalm is 2.273588 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532333.135370940]: [End-Effector Monitor Node] End-effector rightPalm is 1.738151 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532333.135441233]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532333.735265874]: [End-Effector Monitor Node] End-effector leftPalm is 2.253087 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532333.735365897]: [End-Effector Monitor Node] End-effector rightPalm is 1.974346 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532333.735455048]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532334.335246714]: [End-Effector Monitor Node] End-effector leftPalm is 2.213156 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532334.335317901]: [End-Effector Monitor Node] End-effector rightPalm is 2.275977 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532334.335368325]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532334.935282124]: [End-Effector Monitor Node] End-effector leftPalm is 2.206319 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532334.935391244]: [End-Effector Monitor Node] End-effector rightPalm is 2.318255 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532334.935498162]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532335.535271556]: [End-Effector Monitor Node] End-effector leftPalm is 2.198571 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532335.535365458]: [End-Effector Monitor Node] End-effector rightPalm is 2.318492 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532335.535434857]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532336.135266902]: [End-Effector Monitor Node] End-effector leftPalm is 2.234817 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532336.135355005]: [End-Effector Monitor Node] End-effector rightPalm is 2.463100 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532336.135420340]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532336.735280101]: [End-Effector Monitor Node] End-effector leftPalm is 2.258354 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532336.735366764]: [End-Effector Monitor Node] End-effector rightPalm is 2.478840 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532336.735440979]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532337.335271857]: [End-Effector Monitor Node] End-effector leftPalm is 2.278108 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532337.335384161]: [End-Effector Monitor Node] End-effector rightPalm is 2.539643 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532337.335476984]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532337.935286502]: [End-Effector Monitor Node] End-effector leftPalm is 2.270938 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532337.935384548]: [End-Effector Monitor Node] End-effector rightPalm is 2.455205 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532337.935482392]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532338.535281681]: [End-Effector Monitor Node] End-effector leftPalm is 2.282793 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532338.535369639]: [End-Effector Monitor Node] End-effector rightPalm is 2.314780 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532338.535428936]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532339.135331394]: [End-Effector Monitor Node] End-effector leftPalm is 2.294602 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532339.135461108]: [End-Effector Monitor Node] End-effector rightPalm is 2.295643 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532339.135597502]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532339.735287566]: [End-Effector Monitor Node] End-effector leftPalm is 2.272204 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532339.735394486]: [End-Effector Monitor Node] End-effector rightPalm is 2.306325 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532339.735477463]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532340.335228828]: [End-Effector Monitor Node] End-effector leftPalm is 2.300195 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532340.335295543]: [End-Effector Monitor Node] End-effector rightPalm is 2.200297 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532340.335341868]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532340.935283090]: [End-Effector Monitor Node] End-effector leftPalm is 2.305239 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532340.935387787]: [End-Effector Monitor Node] End-effector rightPalm is 2.139447 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532340.935450769]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532341.535279474]: [End-Effector Monitor Node] End-effector leftPalm is 2.297945 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532341.535356233]: [End-Effector Monitor Node] End-effector rightPalm is 1.869958 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532341.535409143]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532342.135285062]: [End-Effector Monitor Node] End-effector leftPalm is 2.272095 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532342.135390358]: [End-Effector Monitor Node] End-effector rightPalm is 1.644419 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532342.135469807]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532342.735244667]: [End-Effector Monitor Node] End-effector leftPalm is 2.275442 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532342.735320355]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532343.335228913]: [End-Effector Monitor Node] End-effector leftPalm is 2.328242 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532343.335301662]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532343.935268452]: [End-Effector Monitor Node] End-effector leftPalm is 2.375240 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532343.935389537]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532344.535258371]: [End-Effector Monitor Node] End-effector leftPalm is 2.407735 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532344.535342524]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532345.135242025]: [End-Effector Monitor Node] End-effector leftPalm is 2.389731 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532345.135337511]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532345.735260723]: [End-Effector Monitor Node] End-effector leftPalm is 2.367926 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532345.735403843]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532346.335248609]: [End-Effector Monitor Node] End-effector leftPalm is 2.285699 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532346.335351802]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532346.935249095]: [End-Effector Monitor Node] End-effector leftPalm is 2.283868 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532346.935344577]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532347.535266533]: [End-Effector Monitor Node] End-effector leftPalm is 2.307859 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532347.535376486]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532348.135259738]: [End-Effector Monitor Node] End-effector leftPalm is 2.325726 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532348.135362293]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532348.735257938]: [End-Effector Monitor Node] End-effector leftPalm is 2.241329 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532348.735348215]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532349.335257039]: [End-Effector Monitor Node] End-effector leftPalm is 2.196548 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532349.335363264]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532349.935254896]: [End-Effector Monitor Node] End-effector leftPalm is 2.220988 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532349.935360174]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532350.535272352]: [End-Effector Monitor Node] End-effector leftPalm is 2.270277 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532350.535385302]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532351.135277588]: [End-Effector Monitor Node] End-effector leftPalm is 2.383701 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532351.135407805]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532351.735243765]: [End-Effector Monitor Node] End-effector leftPalm is 2.256937 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532351.735327157]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532352.335289326]: [End-Effector Monitor Node] End-effector leftPalm is 2.267883 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532352.335430122]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532352.935246953]: [End-Effector Monitor Node] End-effector leftPalm is 2.295818 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532352.935385263]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532353.535242018]: [End-Effector Monitor Node] End-effector leftPalm is 2.308756 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532353.535346491]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532354.135264154]: [End-Effector Monitor Node] End-effector leftPalm is 2.318422 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532354.135377026]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532354.735262150]: [End-Effector Monitor Node] End-effector leftPalm is 2.306378 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532354.735361574]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532355.335292441]: [End-Effector Monitor Node] End-effector leftPalm is 2.301831 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532355.335424754]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532355.935278611]: [End-Effector Monitor Node] End-effector leftPalm is 2.308764 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532355.935395809]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532356.535294072]: [End-Effector Monitor Node] End-effector leftPalm is 2.297980 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532356.535452959]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532357.135272144]: [End-Effector Monitor Node] End-effector leftPalm is 2.286339 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532357.135435862]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532357.735241963]: [End-Effector Monitor Node] End-effector leftPalm is 2.263765 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532357.735360314]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532358.335248097]: [End-Effector Monitor Node] End-effector leftPalm is 2.229947 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532358.335347537]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532358.935282796]: [End-Effector Monitor Node] End-effector leftPalm is 2.217940 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532358.935396348]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532359.535261366]: [End-Effector Monitor Node] End-effector leftPalm is 2.223560 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532359.535368687]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532360.135260571]: [End-Effector Monitor Node] End-effector leftPalm is 2.225349 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532360.135353197]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532360.735236224]: [End-Effector Monitor Node] End-effector leftPalm is 2.233540 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532360.735330674]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532361.335254858]: [End-Effector Monitor Node] End-effector leftPalm is 2.224855 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532361.335357299]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532361.935247604]: [End-Effector Monitor Node] End-effector leftPalm is 2.234935 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532361.935334215]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532362.535281778]: [End-Effector Monitor Node] End-effector leftPalm is 2.263919 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532362.535392205]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532363.135260930]: [End-Effector Monitor Node] End-effector leftPalm is 2.206298 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532363.135384206]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532363.735297844]: [End-Effector Monitor Node] End-effector leftPalm is 2.026673 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532363.735415842]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532364.335261398]: [End-Effector Monitor Node] End-effector leftPalm is 1.764761 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532364.335342481]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532364.935259608]: [End-Effector Monitor Node] End-effector leftPalm is 1.672042 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532364.935358410]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532384.635294735]: [End-Effector Monitor Node] End-effector rightPalm is 1.620440 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532384.635402848]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532385.235329870]: [End-Effector Monitor Node] End-effector rightPalm is 1.850164 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532385.235442190]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532385.835321998]: [End-Effector Monitor Node] End-effector leftPalm is 1.683677 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532385.835446610]: [End-Effector Monitor Node] End-effector rightPalm is 2.081320 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532385.835555657]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532386.435298166]: [End-Effector Monitor Node] End-effector leftPalm is 1.730275 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532386.435382612]: [End-Effector Monitor Node] End-effector rightPalm is 2.386431 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532386.435439509]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532387.035282823]: [End-Effector Monitor Node] End-effector leftPalm is 1.769951 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532387.035393601]: [End-Effector Monitor Node] End-effector rightPalm is 2.467225 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532387.035454081]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532387.635282505]: [End-Effector Monitor Node] End-effector leftPalm is 1.890387 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532387.635375208]: [End-Effector Monitor Node] End-effector rightPalm is 2.542472 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532387.635446068]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532388.235243618]: [End-Effector Monitor Node] End-effector leftPalm is 2.222739 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532388.235341513]: [End-Effector Monitor Node] End-effector rightPalm is 2.726963 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532388.235428114]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532388.835280008]: [End-Effector Monitor Node] End-effector leftPalm is 2.290536 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532388.835379738]: [End-Effector Monitor Node] End-effector rightPalm is 2.771192 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532388.835453601]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532389.435275516]: [End-Effector Monitor Node] End-effector leftPalm is 2.749376 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532389.435370028]: [End-Effector Monitor Node] End-effector rightPalm is 2.913161 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532389.435457031]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532390.035281571]: [End-Effector Monitor Node] End-effector leftPalm is 2.803853 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532390.035377834]: [End-Effector Monitor Node] End-effector rightPalm is 2.847801 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532390.035509751]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532390.635270473]: [End-Effector Monitor Node] End-effector leftPalm is 2.555179 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532390.635371286]: [End-Effector Monitor Node] End-effector rightPalm is 2.713578 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532390.635447590]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532391.235266578]: [End-Effector Monitor Node] End-effector leftPalm is 2.556125 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532391.235351298]: [End-Effector Monitor Node] End-effector rightPalm is 2.603975 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532391.235407841]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532391.835285601]: [End-Effector Monitor Node] End-effector leftPalm is 2.626620 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532391.835368946]: [End-Effector Monitor Node] End-effector rightPalm is 2.558982 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532391.835420545]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532392.435298079]: [End-Effector Monitor Node] End-effector leftPalm is 2.671561 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532392.435414907]: [End-Effector Monitor Node] End-effector rightPalm is 2.550503 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532392.435481383]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532393.035281713]: [End-Effector Monitor Node] End-effector leftPalm is 2.613306 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532393.035390770]: [End-Effector Monitor Node] End-effector rightPalm is 2.571029 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532393.035506146]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532393.635269218]: [End-Effector Monitor Node] End-effector leftPalm is 2.552862 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532393.635354686]: [End-Effector Monitor Node] End-effector rightPalm is 2.604231 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532393.635428136]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532394.235266482]: [End-Effector Monitor Node] End-effector leftPalm is 2.559613 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532394.235355875]: [End-Effector Monitor Node] End-effector rightPalm is 2.635845 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532394.235434212]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532394.835253330]: [End-Effector Monitor Node] End-effector leftPalm is 2.875280 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532394.835339541]: [End-Effector Monitor Node] End-effector rightPalm is 2.648680 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532394.835402449]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532395.435271462]: [End-Effector Monitor Node] End-effector leftPalm is 2.800312 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532395.435364776]: [End-Effector Monitor Node] End-effector rightPalm is 2.368629 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532395.435432276]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532396.035274335]: [End-Effector Monitor Node] End-effector leftPalm is 2.804850 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532396.035368343]: [End-Effector Monitor Node] End-effector rightPalm is 2.206727 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532396.035432950]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532396.635282461]: [End-Effector Monitor Node] End-effector leftPalm is 2.866744 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532396.635401499]: [End-Effector Monitor Node] End-effector rightPalm is 2.022392 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532396.635505332]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532397.235297444]: [End-Effector Monitor Node] End-effector leftPalm is 2.900753 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532397.235411519]: [End-Effector Monitor Node] End-effector rightPalm is 1.978833 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532397.235498524]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.646328 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532397.235542837]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532397.835295032]: [End-Effector Monitor Node] End-effector leftPalm is 2.906807 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532397.835391393]: [End-Effector Monitor Node] End-effector rightPalm is 2.226153 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532397.835462055]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532398.435266161]: [End-Effector Monitor Node] End-effector leftPalm is 2.862106 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532398.435377691]: [End-Effector Monitor Node] End-effector rightPalm is 2.171580 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532398.435474569]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532399.035356223]: [End-Effector Monitor Node] End-effector leftPalm is 2.819830 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532399.035489409]: [End-Effector Monitor Node] End-effector rightPalm is 2.176426 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532399.035595921]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532399.635288278]: [End-Effector Monitor Node] End-effector leftPalm is 2.824234 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532399.635397827]: [End-Effector Monitor Node] End-effector rightPalm is 2.124433 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532399.635470021]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532400.235280695]: [End-Effector Monitor Node] End-effector leftPalm is 2.847929 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532400.235374226]: [End-Effector Monitor Node] End-effector rightPalm is 2.118842 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532400.235438109]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532400.835275709]: [End-Effector Monitor Node] End-effector leftPalm is 2.879729 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532400.835377437]: [End-Effector Monitor Node] End-effector rightPalm is 2.076496 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532400.835443208]: [End-Effector Monitor Node] End-effector upperNeckPitchLink is 1.608456 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532400.835481564]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532401.435303344]: [End-Effector Monitor Node] End-effector leftPalm is 2.864710 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532401.435411751]: [End-Effector Monitor Node] End-effector rightPalm is 2.090768 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532401.435487947]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532402.035268666]: [End-Effector Monitor Node] End-effector leftPalm is 2.864334 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532402.035354459]: [End-Effector Monitor Node] End-effector rightPalm is 2.095035 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532402.035414964]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532402.635284078]: [End-Effector Monitor Node] End-effector leftPalm is 2.865128 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532402.635382891]: [End-Effector Monitor Node] End-effector rightPalm is 2.091042 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532402.635466860]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532403.235268989]: [End-Effector Monitor Node] End-effector leftPalm is 2.793331 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532403.235357869]: [End-Effector Monitor Node] End-effector rightPalm is 2.151647 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532403.235420712]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532403.835255801]: [End-Effector Monitor Node] End-effector leftPalm is 2.756773 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532403.835339167]: [End-Effector Monitor Node] End-effector rightPalm is 2.193160 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532403.835398554]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532404.435277080]: [End-Effector Monitor Node] End-effector leftPalm is 2.762242 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532404.435370643]: [End-Effector Monitor Node] End-effector rightPalm is 2.231179 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532404.435448494]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532405.035271639]: [End-Effector Monitor Node] End-effector leftPalm is 2.799987 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532405.035356583]: [End-Effector Monitor Node] End-effector rightPalm is 2.311550 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532405.035415969]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532405.635306447]: [End-Effector Monitor Node] End-effector leftPalm is 2.716616 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532405.635423519]: [End-Effector Monitor Node] End-effector rightPalm is 2.343399 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532405.635497152]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532406.235256653]: [End-Effector Monitor Node] End-effector leftPalm is 2.661828 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532406.235344581]: [End-Effector Monitor Node] End-effector rightPalm is 2.488174 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532406.235415930]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532406.835264770]: [End-Effector Monitor Node] End-effector leftPalm is 2.454679 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532406.835385226]: [End-Effector Monitor Node] End-effector rightPalm is 2.398297 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532406.835491014]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532407.435302948]: [End-Effector Monitor Node] End-effector leftPalm is 2.180921 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532407.435421662]: [End-Effector Monitor Node] End-effector rightPalm is 2.175382 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532407.435546791]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532408.035282846]: [End-Effector Monitor Node] End-effector leftPalm is 2.205788 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532408.035388683]: [End-Effector Monitor Node] End-effector rightPalm is 2.460394 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532408.035464812]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532408.635284033]: [End-Effector Monitor Node] End-effector leftPalm is 2.165777 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532408.635373389]: [End-Effector Monitor Node] End-effector rightPalm is 2.691774 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532408.635449745]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532409.235278957]: [End-Effector Monitor Node] End-effector leftPalm is 2.076748 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532409.235409637]: [End-Effector Monitor Node] End-effector rightPalm is 2.698334 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532409.235520798]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532409.835258360]: [End-Effector Monitor Node] End-effector leftPalm is 2.094472 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532409.835339611]: [End-Effector Monitor Node] End-effector rightPalm is 2.775504 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532409.835395133]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532410.435282631]: [End-Effector Monitor Node] End-effector leftPalm is 2.131271 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532410.435383419]: [End-Effector Monitor Node] End-effector rightPalm is 2.744777 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532410.435448770]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532411.035335782]: [End-Effector Monitor Node] End-effector leftPalm is 2.130055 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532411.035454195]: [End-Effector Monitor Node] End-effector rightPalm is 2.603097 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532411.035547622]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532411.635259107]: [End-Effector Monitor Node] End-effector leftPalm is 2.112219 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532411.635339489]: [End-Effector Monitor Node] End-effector rightPalm is 2.068833 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532411.635390824]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532412.235275012]: [End-Effector Monitor Node] End-effector leftPalm is 2.072598 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532412.235397799]: [End-Effector Monitor Node] End-effector rightPalm is 2.026598 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532412.235510663]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532412.835272899]: [End-Effector Monitor Node] End-effector leftPalm is 2.025365 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532412.835368977]: [End-Effector Monitor Node] End-effector rightPalm is 2.195381 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532412.835450752]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532413.435236816]: [End-Effector Monitor Node] End-effector leftPalm is 2.015917 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532413.435306356]: [End-Effector Monitor Node] End-effector rightPalm is 2.145770 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532413.435358780]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532414.035261697]: [End-Effector Monitor Node] End-effector leftPalm is 2.021344 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532414.035341156]: [End-Effector Monitor Node] End-effector rightPalm is 2.135038 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532414.035398428]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532414.635281009]: [End-Effector Monitor Node] End-effector leftPalm is 2.028172 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532414.635371216]: [End-Effector Monitor Node] End-effector rightPalm is 2.128991 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532414.635428189]: [End-Effector Monitor Node] Performing soft e-stop!
+[ WARN] [1682532415.235319265]: [End-Effector Monitor Node] End-effector leftPalm is 2.019017 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532415.235417282]: [End-Effector Monitor Node] End-effector rightPalm is 2.117378 radians away from desired orientation, which exceeds limit 1.600000
+[ WARN] [1682532415.235469243]: [End-Effector Monitor Node] Performing soft e-stop!

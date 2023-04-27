@@ -3,7 +3,7 @@
  * Emily Sheetz, NSTGRO VTE 2023
  **/
 
-#include <nodes/end_effector_monitor.h>
+#include <monitors/end_effector_monitor.h>
 
 // CONSTRUCTORS/DESTRUCTORS
 EndEffectorMonitor::EndEffectorMonitor() {
@@ -14,11 +14,11 @@ EndEffectorMonitor::EndEffectorMonitor() {
     EE_HEAD_ORI_DELTA_LIMIT_ = 10.0;
     // NOTE initialization does not matter, will immediately be reconfigured to defaults set in cfg/EndEffectorMonitorParams.cfg
 
-    ROS_INFO("[%s] Constructed", getNodeName().c_str());
+    ROS_INFO("[End-Effector Monitor] Constructed");
 }
 
 EndEffectorMonitor::~EndEffectorMonitor() {
-    ROS_INFO("[%s] Destroyed", getNodeName().c_str());
+    ROS_INFO("[End-Effector Monitor] Destroyed");
 }
 
 // INITIALIZATION
@@ -31,7 +31,7 @@ void EndEffectorMonitor::initializeMonitor(const ros::NodeHandle& nh) {
     // initialize dynamic reconfigure server
     initializeDynamicReconfigureServer();
 
-    ROS_INFO("[%s] Initialized", getNodeName().c_str());
+    ROS_INFO("[End-Effector Monitor] Initialized");
 
     return;
 }
@@ -61,25 +61,36 @@ void EndEffectorMonitor::initializeDynamicReconfigureServer() {
 void EndEffectorMonitor::paramReconfigureCallback(val_soft_estop_monitor::EndEffectorMonitorParamsConfig &config, uint32_t level) {
     // take params from reconfigure request and store them internally
     debug_ = config.debug;
+    MONITOR_HANDS_ = config.monitor_hands;
     EE_HAND_POS_DELTA_LIMIT_ = config.ee_hand_pos_delta_limit;
     EE_HAND_ORI_DELTA_LIMIT_ = config.ee_hand_ori_delta_limit;
+    MONITOR_HEAD_ = config.monitor_head;
     EE_HEAD_POS_DELTA_LIMIT_ = config.ee_head_pos_delta_limit;
     EE_HEAD_ORI_DELTA_LIMIT_ = config.ee_head_ori_delta_limit;
 
     if( debug_ ) {
         ROS_INFO("[%s] ENTERED DEBUG MODE", getNodeName().c_str());
     }
-    ROS_INFO("[%s] Reconfigured hand position limit to %f meters and hand orientation limit to %f radians",
-             getNodeName().c_str(), EE_HAND_POS_DELTA_LIMIT_, EE_HAND_ORI_DELTA_LIMIT_);
-    ROS_INFO("[%s] Reconfigured head position limit to %f meters and head orientation limit to %f radians",
-             getNodeName().c_str(), EE_HEAD_POS_DELTA_LIMIT_, EE_HEAD_ORI_DELTA_LIMIT_);
+
+    // hand monitor
+    if( !MONITOR_HANDS_ ) {
+        ROS_INFO("[%s] NOT MONITORING HANDS", getNodeName().c_str());
+    }
+    else {
+        ROS_INFO("[%s] Reconfigured hand position limit to %f meters and hand orientation limit to %f radians",
+                 getNodeName().c_str(), EE_HAND_POS_DELTA_LIMIT_, EE_HAND_ORI_DELTA_LIMIT_);
+    }
+
+    // head monitor
+    if( !MONITOR_HEAD_ ) {
+        ROS_INFO("[%s] NOT MONITORING HEAD", getNodeName().c_str());
+    }
+    else {
+        ROS_INFO("[%s] Reconfigured head position limit to %f meters and head orientation limit to %f radians",
+                 getNodeName().c_str(), EE_HEAD_POS_DELTA_LIMIT_, EE_HEAD_ORI_DELTA_LIMIT_);
+    }
 
     return;
-}
-
-// GETTERS/SETTERS
-std::string EndEffectorMonitor::getNodeName() {
-    return std::string("End-Effector Monitor Node");
 }
 
 // MONITOR FUNCTIONS
@@ -143,10 +154,22 @@ bool EndEffectorMonitor::checkEndEffectorDeltas() {
 bool EndEffectorMonitor::checkEndEffectorPositionLimit(double pos_dist, std::string ee_name) {
     // check for end-effector
     if( (ee_name == std::string("leftPalm")) || (ee_name == std::string("rightPalm")) ) {
+        // check if monitoring hands
+        if( !MONITOR_HANDS_ ) {
+            // ignore hands, no limits reached
+            return false;
+        }
+
         // check for hand position limit
         return checkEndEffectorPositionLimit(pos_dist, EE_HAND_POS_DELTA_LIMIT_, ee_name);
     }
     else if( ee_name == std::string("upperNeckPitchLink") ) {
+        // check if monitoring head
+        if( !MONITOR_HEAD_ ) {
+            // ignore head, no limits reached
+            return false;
+        }
+
         // check for head position limit
         return checkEndEffectorPositionLimit(pos_dist, EE_HEAD_POS_DELTA_LIMIT_, ee_name);
     }
@@ -172,10 +195,22 @@ bool EndEffectorMonitor::checkEndEffectorPositionLimit(double pos_dist, double d
 bool EndEffectorMonitor::checkEndEffectorRotationLimit(double rot_dist, std::string ee_name) {
     // check for end-effector
     if( (ee_name == std::string("leftPalm")) || (ee_name == std::string("rightPalm")) ) {
+        // check if monitoring hands
+        if( !MONITOR_HANDS_ ) {
+            // ignore hands, no limits reached
+            return false;
+        }
+
         // check for hand rotation limit
         return checkEndEffectorRotationLimit(rot_dist, EE_HAND_ORI_DELTA_LIMIT_, ee_name);
     }
     else if( ee_name == std::string("upperNeckPitchLink") ) {
+        // check if monitoring head
+        if( !MONITOR_HEAD_ ) {
+            // ignore head, no limits reached
+            return false;
+        }
+
         // check for head rotation limit
         return checkEndEffectorRotationLimit(rot_dist, EE_HEAD_ORI_DELTA_LIMIT_, ee_name);
     }

@@ -27,7 +27,8 @@ find_package(Eigen3 REQUIRED)
 #     dynamic_reconfigure Param Config Setup
 #------------------------------------------------------------------------
 generate_dynamic_reconfigure_options(
-  cfg/JointMonitorParams.cfg
+  cfg/JointStateMonitorParams.cfg
+  cfg/JointStateDeltaMonitorParams.cfg
   cfg/EndEffectorMonitorParams.cfg
 )
 message ("generated param config files!")

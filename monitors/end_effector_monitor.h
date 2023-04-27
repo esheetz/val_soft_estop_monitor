@@ -25,13 +25,13 @@ class EndEffectorMonitor : public GenericMonitor
 public:
     // CONSTRUCTORS/DESTRUCTORS
     EndEffectorMonitor();
-    ~EndEffectorMonitor();
+    virtual ~EndEffectorMonitor();
 
     // INITIALIZATION
     virtual void initializeMonitor(const ros::NodeHandle& nh) override;
 
     // CONNECTIONS
-    bool initializeConnections() override;
+    virtual bool initializeConnections() override;
 
     // DYNAMIC RECONFIGURE SERVER
     void initializeDynamicReconfigureServer() override;
@@ -40,7 +40,7 @@ public:
     void paramReconfigureCallback(val_soft_estop_monitor::EndEffectorMonitorParamsConfig &config, uint32_t level);
 
     // GETTERS/SETTERS
-    std::string getNodeName() override;
+    virtual std::string getNodeName() = 0;
 
     // HELPERS
     virtual void publishAllSoftEStopMessages() = 0;
@@ -52,6 +52,15 @@ public:
     bool checkEndEffectorPositionLimit(double pos_dist, double dist_limit, std::string ee_name);
     bool checkEndEffectorRotationLimit(double rot_dist, std::string ee_name);
     bool checkEndEffectorRotationLimit(double rot_dist, double dist_limit, std::string ee_name);
+
+    /*
+     * NOTE most important implementation differences for any derived class:
+     *      initializeMonitor() : read any needed params from node handle
+     *      initializeConnections() : initialize connections, specifically to where desired ee poses are coming from
+     *      callback for desired end-effector poses : should convert from message type into geometry_msgs::Pose, which is stored in desired_ee_poses_ map
+     *      getNodeName() : appropriate node name
+     *      publishAllSoftEStopMessages() : publish appropriate messages to perform soft e-stop
+     */
 
 protected:
     // dynamic reconfigure server
@@ -66,6 +75,10 @@ protected:
     double EE_HAND_ORI_DELTA_LIMIT_;
     double EE_HEAD_POS_DELTA_LIMIT_;
     double EE_HEAD_ORI_DELTA_LIMIT_;
+
+    // flags for monitoring hands/head
+    bool MONITOR_HANDS_;
+    bool MONITOR_HEAD_;
 };
 
 #endif
