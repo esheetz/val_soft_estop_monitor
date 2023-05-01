@@ -17,6 +17,8 @@
 #include <geometry_msgs/Quaternion.h>
 #include <std_msgs/String.h>
 #include <val_vr_ros/ControlState.h>
+#include <val_safety_exception_reporter/SoftEStop.h>
+#include <val_safety_exception_reporter/SoftEStopEndEffectorStreaming.h>
 
 #include <dynamic_reconfigure/server.h>
 #include <val_soft_estop_monitor/EndEffectorMonitorParamsConfig.h>
@@ -58,11 +60,13 @@ public:
     // HELPERS
     void publishFreezeControlStateMessage();
     void publishAllSoftEStopMessages() override;
+    void publishSoftEStopReportMessage() override;
 
 private:
     std::string desired_ee_pose_topic_; // topic for listening to desired end-effector poses
     ros::Subscriber desired_ee_pose_sub_; // subscriber for listening to desired end-effector poses
     ros::Publisher control_state_pub_; // publisher for streaming control state
+    ros::Publisher safety_reporter_pub_; // publisher for safety reporter
 
     // internal storage for monitored end-effectors
     std::map<int, std::string> ee_hash_to_name_;

@@ -19,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   controller_msgs
   val_vr_ros
+  val_safety_exception_reporter
 )
 
 find_package(Eigen3 REQUIRED)
@@ -37,7 +38,7 @@ message ("generated param config files!")
 #     catkin Setup
 #------------------------------------------------------------------------
 catkin_package(
-  CATKIN_DEPENDS roscpp rospy tf geometry_msgs sensor_msgs std_msgs controller_msgs val_vr_ros
+  CATKIN_DEPENDS roscpp rospy tf geometry_msgs sensor_msgs std_msgs controller_msgs val_vr_ros val_safety_exception_reporter
   DEPENDS EIGEN3
 )
 include_directories(${catkin_INCLUDE_DIRS})

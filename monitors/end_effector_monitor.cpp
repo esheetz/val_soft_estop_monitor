@@ -93,6 +93,71 @@ void EndEffectorMonitor::paramReconfigureCallback(val_soft_estop_monitor::EndEff
     return;
 }
 
+// HELPERS
+double EndEffectorMonitor::getEndEffectorPositionLimit(std::string ee_name) {
+    // check for end-effector
+    if( (ee_name == std::string("leftPalm")) || (ee_name == std::string("rightPalm")) ) {
+        return EE_HAND_POS_DELTA_LIMIT_;
+    }
+    else if( ee_name == std::string("upperNeckPitchLink") ) {
+        return EE_HEAD_POS_DELTA_LIMIT_;
+    }
+    else {
+        // should never get here
+        ROS_ERROR("[%s] End-effector %s not recognized; no known position limit", getNodeName().c_str(), ee_name.c_str());
+        return -1.0;
+    }
+}
+
+double EndEffectorMonitor::getEndEffectorRotationLimit(std::string ee_name) {
+    // check for end-effector
+    if( (ee_name == std::string("leftPalm")) || (ee_name == std::string("rightPalm")) ) {
+        return EE_HAND_ORI_DELTA_LIMIT_;
+    }
+    else if( ee_name == std::string("upperNeckPitchLink") ) {
+        return EE_HEAD_ORI_DELTA_LIMIT_;
+    }
+    else {
+        // should never get here
+        ROS_ERROR("[%s] End-effector %s not recognized; no known rotation limit", getNodeName().c_str(), ee_name.c_str());
+        return -1.0;
+    }
+}
+
+void EndEffectorMonitor::updateEndEffectorInfo(std::string ee_name,
+                                               geometry_msgs::Point desired_position_in_world, geometry_msgs::Quaternion desired_orientation_in_world,
+                                               geometry_msgs::Point current_position_in_world, geometry_msgs::Quaternion current_orientation_in_world,
+                                               double dist_pos, double dist_rot,
+                                               bool limit_pos, bool limit_rot) {
+    // verify given end-effector name is valid
+    if( (ee_name != std::string("leftPalm")) && (ee_name != std::string("rightPalm")) &&
+        (ee_name != std::string("upperNeckPitchLink")) ) {
+        // should never get here
+        ROS_ERROR("[%s] End-effector %s not recognized; no end-effector info to update", getNodeName().c_str(), ee_name.c_str());
+        return;
+    }
+
+    // create new end-effector info structure
+    EndEffectorInfo ee_info;
+
+    // set end-effector info
+    ee_info.ee_name = ee_name;
+    ee_info.position_distance = dist_pos;
+    ee_info.position_distance_threshold = getEndEffectorPositionLimit(ee_name);
+    ee_info.rotation_distance = dist_rot;
+    ee_info.rotation_distance_threshold = getEndEffectorRotationLimit(ee_name);
+    ee_info.limit_found = (limit_pos || limit_rot);
+    ee_info.desired_position_in_world = desired_position_in_world;
+    ee_info.desired_orientation_in_world = desired_orientation_in_world;
+    ee_info.current_position_in_world = current_position_in_world;
+    ee_info.current_orientation_in_world = current_orientation_in_world;
+
+    // update map
+    ee_info_[ee_name] = ee_info;
+
+    return;
+}
+
 // MONITOR FUNCTIONS
 bool EndEffectorMonitor::checkMonitorCondition() {
     return checkEndEffectorDeltas();
@@ -146,6 +211,11 @@ bool EndEffectorMonitor::checkEndEffectorDeltas() {
             // update flag
             limit_found = true;
         }
+
+        // update map of end-effector info
+        updateEndEffectorInfo(ee_name,
+                              desired_ee_pos, desired_ee_rot, actual_ee_pos, actual_ee_rot,
+                              dist_pos, dist_rot, limit_pos, limit_rot);
     }
 
     return limit_found;
@@ -160,8 +230,11 @@ bool EndEffectorMonitor::checkEndEffectorPositionLimit(double pos_dist, std::str
             return false;
         }
 
+        // get hand limit
+        double hand_limit = getEndEffectorPositionLimit(ee_name);
+
         // check for hand position limit
-        return checkEndEffectorPositionLimit(pos_dist, EE_HAND_POS_DELTA_LIMIT_, ee_name);
+        return checkEndEffectorPositionLimit(pos_dist, hand_limit, ee_name);
     }
     else if( ee_name == std::string("upperNeckPitchLink") ) {
         // check if monitoring head
@@ -170,8 +243,11 @@ bool EndEffectorMonitor::checkEndEffectorPositionLimit(double pos_dist, std::str
             return false;
         }
 
+        // get head limit
+        double head_limit = getEndEffectorPositionLimit(ee_name);
+
         // check for head position limit
-        return checkEndEffectorPositionLimit(pos_dist, EE_HEAD_POS_DELTA_LIMIT_, ee_name);
+        return checkEndEffectorPositionLimit(pos_dist, head_limit, ee_name);
     }
     else {
         // should never get here
@@ -201,8 +277,11 @@ bool EndEffectorMonitor::checkEndEffectorRotationLimit(double rot_dist, std::str
             return false;
         }
 
+        // get hand limit
+        double hand_limit = getEndEffectorRotationLimit(ee_name);
+
         // check for hand rotation limit
-        return checkEndEffectorRotationLimit(rot_dist, EE_HAND_ORI_DELTA_LIMIT_, ee_name);
+        return checkEndEffectorRotationLimit(rot_dist, hand_limit, ee_name);
     }
     else if( ee_name == std::string("upperNeckPitchLink") ) {
         // check if monitoring head
@@ -211,8 +290,11 @@ bool EndEffectorMonitor::checkEndEffectorRotationLimit(double rot_dist, std::str
             return false;
         }
 
+        // get head limit
+        double head_limit = getEndEffectorRotationLimit(ee_name);
+
         // check for head rotation limit
-        return checkEndEffectorRotationLimit(rot_dist, EE_HEAD_ORI_DELTA_LIMIT_, ee_name);
+        return checkEndEffectorRotationLimit(rot_dist, head_limit, ee_name);
     }
     else {
         // should never get here

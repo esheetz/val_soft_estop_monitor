@@ -188,6 +188,8 @@ void GenericMonitor::performSoftEStop() {
     if( ihmc_interface_pause_stop_msg_counter_ > 0 ) {
         // publish necessary messages to perform soft e-stop
         publishAllSoftEStopMessages();
+        // publish message for safety reporter
+        publishSoftEStopReportMessage();
         // decrement counter
         decrementMessageCounter();
     }

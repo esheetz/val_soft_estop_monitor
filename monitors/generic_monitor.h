@@ -49,6 +49,7 @@ public:
     void publishPauseWalkingMessage();
     void publishStopWalkingMessage();
     virtual void publishAllSoftEStopMessages() = 0;
+    virtual void publishSoftEStopReportMessage() = 0;
 
     // MONITOR FUNCTIONS
     virtual bool checkMonitorCondition() = 0;

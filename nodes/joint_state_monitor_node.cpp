@@ -46,6 +46,9 @@ bool JointStateMonitorNode::initializeConnections() {
     // joint state subscriber
     joint_state_sub_ = nh_.subscribe(joint_state_topic_, 1, &JointStateMonitorNode::jointStateCallback, this);
 
+    // safety reporter publisher
+    safety_reporter_pub_ = nh_.advertise<val_safety_exception_reporter::SoftEStop>("/valkyrie_safety_reporter/soft_estop", 10);
+
     return true;
 }
 
@@ -125,6 +128,49 @@ void JointStateMonitorNode::publishAllSoftEStopMessages() {
     return;
 }
 
+void JointStateMonitorNode::publishSoftEStopReportMessage() {
+    // only publish with the last round of soft e-stop messages
+    if( ihmc_interface_pause_stop_msg_counter_ == 1 ) {
+        // create soft e-stop report message
+        val_safety_exception_reporter::SoftEStop soft_estop_report_msg;
+
+        // add joint state to soft e-stop causes
+        soft_estop_report_msg.soft_estop_causes.clear();
+        soft_estop_report_msg.soft_estop_causes.push_back(soft_estop_report_msg.JOINT_STATE);
+
+        // clear out joint state messages
+        soft_estop_report_msg.joint_state_msg.clear();
+
+        // look through set of joints that reached limits
+        for( const std::string& joint_name : limited_joints_ ) {
+            // get velocity and torque info
+            double joint_vel = joint_velocities_[joint_name];
+            double joint_trq = joint_torques_[joint_name];
+
+            // create joint state soft e-stop message
+            val_safety_exception_reporter::SoftEStopJointState j_msg;
+
+            // set message fields
+            j_msg.joint_name = joint_name;
+            j_msg.joint_velocity = joint_vel;
+            j_msg.velocity_threshold = JOINT_VELOCITY_LIMIT_;
+            j_msg.joint_torque = joint_trq;
+            j_msg.torque_threshold = JOINT_TORQUE_LIMIT_;
+
+            // add to soft e-stop message
+            soft_estop_report_msg.joint_state_msg.push_back(j_msg);
+        }
+
+        // publish message
+        safety_reporter_pub_.publish(soft_estop_report_msg);
+
+        // any stored info is out of date; clear everything
+        limited_joints_.clear();
+    }
+
+    return;
+}
+
 // MONITOR FUNCTIONS
 bool JointStateMonitorNode::checkMonitorCondition() {
     return checkVelocityTorqueLimits();
@@ -155,6 +201,8 @@ bool JointStateMonitorNode::checkVelocityTorqueLimits() {
             if( abs(joint_vel.second) >= JOINT_VELOCITY_LIMIT_ ) {
                 // update flag
                 limit_found = true;
+                // add joint to set of joints at limit
+                limited_joints_.insert(joint_vel.first);
                 ROS_WARN("[%s] Joint %s has velocity %f, which exceeds limit %f",
                          getNodeName().c_str(), joint_vel.first.c_str(), joint_vel.second, JOINT_VELOCITY_LIMIT_);
             }
@@ -175,6 +223,8 @@ bool JointStateMonitorNode::checkVelocityTorqueLimits() {
             if( abs(joint_trq.second) >= JOINT_TORQUE_LIMIT_ ) {
                 // update flag
                 limit_found = true;
+                // add joint to set of joints at limit
+                limited_joints_.insert(joint_trq.first);
                 ROS_WARN("[%s] Joint %s has torque %f, which exceeds limit %f",
                          getNodeName().c_str(), joint_trq.first.c_str(), joint_trq.second, JOINT_TORQUE_LIMIT_);
             }

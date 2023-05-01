@@ -48,6 +48,9 @@ bool JointStateDeltaMonitorNode::initializeConnections() {
     // joint state subscriber
     joint_state_sub_ = nh_.subscribe(joint_state_topic_, 1, &JointStateDeltaMonitorNode::jointStateCallback, this);
 
+    // safety reporter publisher
+    safety_reporter_pub_ = nh_.advertise<val_safety_exception_reporter::SoftEStop>("/valkyrie_safety_reporter/soft_estop", 10);
+
     return true;
 }
 
@@ -183,6 +186,55 @@ void JointStateDeltaMonitorNode::publishAllSoftEStopMessages() {
     return;
 }
 
+void JointStateDeltaMonitorNode::publishSoftEStopReportMessage() {
+    // only publish with the last round of soft e-stop messages
+    if( ihmc_interface_pause_stop_msg_counter_ == 1 ) {
+        // create soft e-stop report message
+        val_safety_exception_reporter::SoftEStop soft_estop_report_msg;
+
+        // add joint state delta to soft e-stop causes
+        soft_estop_report_msg.soft_estop_causes.clear();
+        soft_estop_report_msg.soft_estop_causes.push_back(soft_estop_report_msg.JOINT_STATE_DELTA);
+
+        // clear out joint state delta messages
+        soft_estop_report_msg.joint_state_delta_msg.clear();
+
+        // look through set of joints that reached limits
+        for( const std::string& joint_name : limited_joints_ ) {
+            // get velocity and torque info
+            JointVelocityInfo vel_info = joint_velocities_[joint_name];
+            JointTorqueInfo trq_info = joint_torques_[joint_name];
+
+            // create joint state delta soft e-stop message
+            val_safety_exception_reporter::SoftEStopJointStateDelta j_msg;
+
+            // set message fields
+            j_msg.joint_name = joint_name;
+            j_msg.prev_joint_velocity = vel_info.prev_velocity;
+            j_msg.prev_joint_velocity_timestamp = vel_info.prev_timestamp;
+            j_msg.curr_joint_velocity = vel_info.curr_velocity;
+            j_msg.curr_joint_velocity_timestamp = vel_info.curr_timestamp;
+            j_msg.velocity_delta_threshold = JOINT_VELOCITY_DELTA_LIMIT_;
+            j_msg.prev_joint_torque = trq_info.prev_torque;
+            j_msg.prev_joint_torque_timestamp = trq_info.prev_timestamp;
+            j_msg.curr_joint_torque = trq_info.curr_torque;
+            j_msg.curr_joint_torque_timestamp = trq_info.curr_timestamp;
+            j_msg.torque_delta_threshold = JOINT_TORQUE_DELTA_LIMIT_;
+
+            // add to soft e-stop message
+            soft_estop_report_msg.joint_state_delta_msg.push_back(j_msg);
+        }
+
+        // publish message
+        safety_reporter_pub_.publish(soft_estop_report_msg);
+
+        // any stored info is out of date; clear everything
+        limited_joints_.clear();
+    }
+
+    return;
+}
+
 // MONITOR FUNCTIONS
 bool JointStateDeltaMonitorNode::checkMonitorCondition() {
     return checkVelocityTorqueDeltaLimits();
@@ -225,6 +277,8 @@ bool JointStateDeltaMonitorNode::checkVelocityTorqueDeltaLimits() {
             if( vel_delta >= JOINT_VELOCITY_DELTA_LIMIT_ ) {
                 // update flag
                 limit_found = true;
+                // add joint to set of joints at limit
+                limited_joints_.insert(joint_name);
                 ROS_WARN("[%s] Joint %s has change in velocity %f, which exceeds limit %f",
                          getNodeName().c_str(), joint_name.c_str(), vel_delta, JOINT_VELOCITY_DELTA_LIMIT_);
             }
@@ -257,6 +311,8 @@ bool JointStateDeltaMonitorNode::checkVelocityTorqueDeltaLimits() {
             if( trq_delta >= JOINT_TORQUE_DELTA_LIMIT_ ) {
                 // update flag
                 limit_found = true;
+                // add joint to set of joints at limit
+                limited_joints_.insert(joint_name);
                 ROS_WARN("[%s] Joint %s has change in torque %f, which exceeds limit %f",
                          getNodeName().c_str(), joint_name.c_str(), trq_delta, JOINT_TORQUE_DELTA_LIMIT_);
             }

@@ -20,6 +20,20 @@
 
 #include <monitors/generic_monitor.h>
 
+// STRUCT FOR TRACKING END-EFFECTOR POSE INFO
+struct EndEffectorInfo {
+    std::string ee_name;
+    double position_distance;
+    double position_distance_threshold;
+    double rotation_distance;
+    double rotation_distance_threshold;
+    bool limit_found;
+    geometry_msgs::Point desired_position_in_world;
+    geometry_msgs::Quaternion desired_orientation_in_world;
+    geometry_msgs::Point current_position_in_world;
+    geometry_msgs::Quaternion current_orientation_in_world;
+};
+
 class EndEffectorMonitor : public GenericMonitor
 {
 public:
@@ -43,7 +57,15 @@ public:
     virtual std::string getNodeName() = 0;
 
     // HELPERS
+    double getEndEffectorPositionLimit(std::string ee_name);
+    double getEndEffectorRotationLimit(std::string ee_name);
+    void updateEndEffectorInfo(std::string ee_name,
+                               geometry_msgs::Point desired_position_in_world, geometry_msgs::Quaternion desired_orientation_in_world,
+                               geometry_msgs::Point current_position_in_world, geometry_msgs::Quaternion current_orientation_in_world,
+                               double dist_pos, double dist_rot,
+                               bool limit_pos, bool limit_rot);
     virtual void publishAllSoftEStopMessages() = 0;
+    virtual void publishSoftEStopReportMessage() = 0;
 
     // MONITOR FUNCTIONS
     bool checkMonitorCondition() override;
@@ -69,6 +91,7 @@ protected:
     // internal storage for desired end-effector poses
     std::map<std::string, geometry_msgs::Pose> desired_ee_poses_;
     bool desired_ee_poses_received_;
+    std::map<std::string, EndEffectorInfo> ee_info_;
 
     // limits for distances between hand/head position and orientation; can be dynamically reconfigured
     double EE_HAND_POS_DELTA_LIMIT_;

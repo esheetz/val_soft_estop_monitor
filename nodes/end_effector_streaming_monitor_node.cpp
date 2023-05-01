@@ -44,6 +44,9 @@ bool EndEffectorStreamingMonitorNode::initializeConnections() {
     // streaming control state publisher
     control_state_pub_ = nh_.advertise<val_vr_ros::ControlState>("/vr/control_state", 1);
 
+    // safety reporter publisher
+    safety_reporter_pub_ = nh_.advertise<val_safety_exception_reporter::SoftEStop>("/valkyrie_safety_reporter/soft_estop", 10);
+
     return true;
 }
 
@@ -53,6 +56,7 @@ void EndEffectorStreamingMonitorNode::desiredEEPoseCallback(const controller_msg
     if( msg.stream_to_controller ) {
         // streaming to controller, clear out map and loop through received inputs
         desired_ee_poses_.clear();
+        ee_info_.clear();
         for( int i = 0 ; i < msg.inputs.size() ; i++ ) {
             // get rigid body message
             controller_msgs::KinematicsToolboxRigidBodyMessage rigid_body_msg = msg.inputs[i];
@@ -118,6 +122,56 @@ void EndEffectorStreamingMonitorNode::publishAllSoftEStopMessages() {
 
     // publish freeze everything message
     publishFreezeControlStateMessage();
+
+    return;
+}
+
+void EndEffectorStreamingMonitorNode::publishSoftEStopReportMessage() {
+    // only publish with the last round of soft e-stop messages
+    if( ihmc_interface_pause_stop_msg_counter_ == 1 ) {
+        // create soft e-stop report message
+        val_safety_exception_reporter::SoftEStop soft_estop_report_msg;
+
+        // add end-effector streaming to soft e-stop causes
+        soft_estop_report_msg.soft_estop_causes.clear();
+        soft_estop_report_msg.soft_estop_causes.push_back(soft_estop_report_msg.END_EFFECTOR_STREAMING);
+
+        // clear out end-effector streaming messages
+        soft_estop_report_msg.ee_streaming_msg.clear();
+
+        // look through map of end-effector limits
+        for( const std::pair<std::string, EndEffectorInfo>& ee_limit_info : ee_info_ ) {
+            // get end-effector info
+            std::string ee_name = ee_limit_info.first;
+            EndEffectorInfo ee_info = ee_limit_info.second;
+
+            // check if limit reached
+            if( ee_info.limit_found ) {
+                // create end-effector streaming soft e-stop message
+                val_safety_exception_reporter::SoftEStopEndEffectorStreaming ee_stream_msg;
+
+                // set message fields
+                ee_stream_msg.ee_name = ee_name;
+                ee_stream_msg.position_distance = ee_info.position_distance;
+                ee_stream_msg.position_distance_threshold = ee_info.position_distance_threshold;
+                ee_stream_msg.rotation_distance = ee_info.rotation_distance;
+                ee_stream_msg.rotation_distance_threshold = ee_info.rotation_distance_threshold;
+                ee_stream_msg.desired_position_in_world = ee_info.desired_position_in_world;
+                ee_stream_msg.desired_orientation_in_world = ee_info.desired_orientation_in_world;
+                ee_stream_msg.current_position_in_world = ee_info.current_position_in_world;
+                ee_stream_msg.current_orientation_in_world = ee_info.current_orientation_in_world;
+
+                // add to soft e-stop message
+                soft_estop_report_msg.ee_streaming_msg.push_back(ee_stream_msg);
+            }
+        }
+
+        // publish message
+        safety_reporter_pub_.publish(soft_estop_report_msg);
+
+        // any stored info is out of date; clear everything
+        ee_info_.clear();
+    }
 
     return;
 }
